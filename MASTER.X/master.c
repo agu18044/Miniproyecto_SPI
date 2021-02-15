@@ -7,6 +7,7 @@
 
 #include <xc.h>
 #include <stdint.h>
+#include <stdio.h>
 #include "SPI.h"
 
 //******************************************************************************
@@ -54,7 +55,14 @@ void main(void) {
 void setup(void) {
     ANSEL = 0;
     ANSELH = 0;
-    TRISC0 = 0;
-    PORTCbits.RC0 = 1;
+    TRISD = 0;
+    TRISE = 0;
+    PORTD = 0;
+    PORTE = 0;
+    
+    TRISC1 = 0;
+    TRISC2 = 0;
+    PORTCbits.RC2 = 1;
+    PORTCbits.RC1 = 1;
     spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 }
