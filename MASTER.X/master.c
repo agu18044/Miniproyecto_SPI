@@ -36,12 +36,15 @@
 //******************************************************************************
 #define _XTAL_FREQ 8000000
 uint8_t cont = 0;
+float V1 = 0;
+char BUFFER[20];
 
 //******************************************************************************
 //  Prototipos de funciones
 //******************************************************************************
 void setup(void);
 void contador (void);
+void ADCread (void);
 
 //******************************************************************************
 //  Ciclo principal
@@ -55,27 +58,50 @@ void main(void) {
     clear_LCD();
     while(1){
         contador();
-        /*PORTCbits.RC2 = 0;
-        __delay_ms(1);
-       
-        spiWrite(1);
-        cont = spiRead();
-        PORTB = cont;
-       
-        __delay_ms(1);
-        PORTCbits.RC2 = 1;
-        __delay_ms(1); */ 
+        ADCread();
+        
+        clear_LCD();
+        set_cursor(1,1);
+        write_string("S1   S2   S3");
+        
+        sprintf(BUFFER, "%2.1f %d",V1,cont);
+        
+        set_cursor(2,1);
+        write_string(BUFFER);
+        
+        Write_USART_String("S1   S2   S3");
+        Write_USART(13);
+        Write_USART(10);
+        
+        Write_USART_String(BUFFER);
+        Write_USART(13);
+        Write_USART(10);
+        
+        __delay_ms(500);
     }
 }
 
 void contador (void){
     PORTCbits.RC2 = 0;
     __delay_ms(1);
+   
     spiWrite(1);
     cont = spiRead();
-    PORTB = cont;
+    
     __delay_ms(1);
     PORTCbits.RC2 = 1;
+    __delay_ms(1);
+}
+
+void ADCread (void){
+    PORTCbits.RC1 = 0;
+    __delay_ms(1);
+       
+    spiWrite(1);
+    V1 = spiRead();
+       
+    __delay_ms(1);
+    PORTCbits.RC1 = 1; 
     __delay_ms(1);
 }
 
@@ -89,10 +115,7 @@ void setup(void) {
     TRISE = 0;
     PORTD = 0;
     PORTE = 0;
-    
-    TRISB = 0;
-    PORTB = 0;
-    
+
     TRISC1 = 0;
     TRISC2 = 0;
     PORTCbits.RC2 = 1;

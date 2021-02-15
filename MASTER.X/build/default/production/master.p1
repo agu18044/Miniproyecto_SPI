@@ -1,6 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"43 master.c
+"45 master.c
+[; ;master.c: 45: 
 [v _setup `(v ~T0 @X0 0 ef ]
 "16 ./USART.h
 [; ;./USART.h: 16: void _baudios(void);
@@ -17,8 +18,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 "51
 [; ;./LCD.h: 51: void clear_LCD(void);
 [v _clear_LCD `(v ~T0 @X0 0 ef ]
-"44 master.c
+"46 master.c
+[; ;master.c: 46:         _delay((unsigned long)((500)*(8000000/4000.0)));
 [v _contador `(v ~T0 @X0 0 ef ]
+"47
+[; ;master.c: 47:     }
+[v _ADCread `(v ~T0 @X0 0 ef ]
+"52 ./LCD.h
+[; ;./LCD.h: 52: void set_cursor (uint8_t a, uint8_t b);
+[v _set_cursor `(v ~T0 @X0 0 ef2`uc`uc ]
+"55
+[; ;./LCD.h: 55: void write_string(char *a);
+[v _write_string `(v ~T0 @X0 0 ef1`*uc ]
+"194 C:\Program Files\Microchip\xc8\v2.31\pic\include\c90\stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"21 ./USART.h
+[; ;./USART.h: 21: void Write_USART_String(char *a);
+[v _Write_USART_String `(v ~T0 @X0 0 ef1`*uc ]
+"20
+[; ;./USART.h: 20: void Write_USART(uint8_t a);
+[v _Write_USART `(v ~T0 @X0 0 ef1`uc ]
+[v F1256 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
+[v __delay `JF1256 ~T0 @X0 0 e ]
+[p i __delay ]
 "296 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 296:     struct {
 [s S10 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -30,20 +53,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "307
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 307: extern volatile PORTCbits_t PORTCbits __attribute__((address(0x007)));
 [v _PORTCbits `VS9 ~T0 @X0 0 e@7 ]
-[v F1256 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
-[v __delay `JF1256 ~T0 @X0 0 e ]
-[p i __delay ]
 "47 ./SPI.h
 [; ;./SPI.h: 47: void spiWrite(char);
 [v _spiWrite `(v ~T0 @X0 0 ef1`uc ]
 "49
 [; ;./SPI.h: 49: char spiRead();
 [v _spiRead `(uc ~T0 @X0 0 e? ]
-"228 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 228: extern volatile unsigned char PORTB __attribute__((address(0x006)));
-[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
-"3387
+"3387 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3387: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
 [v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
 "3449
@@ -61,17 +77,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "414
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 414: extern volatile unsigned char PORTE __attribute__((address(0x009)));
 [v _PORTE `Vuc ~T0 @X0 0 e@9 ]
-"1478
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1478: extern volatile unsigned char TRISB __attribute__((address(0x086)));
-[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
 "4451
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 4451: extern volatile __bit TRISC1 __attribute__((address(0x439)));
 [v _TRISC1 `Vb ~T0 @X0 0 e@1081 ]
 "4454
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 4454: extern volatile __bit TRISC2 __attribute__((address(0x43A)));
 [v _TRISC2 `Vb ~T0 @X0 0 e@1082 ]
-"100 master.c
-[; ;master.c: 100:     spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+"123 master.c
 [c E1349 32 33 34 35 36 37 .. ]
 [n E1349 . SPI_MASTER_OSC_DIV4 SPI_MASTER_OSC_DIV16 SPI_MASTER_OSC_DIV64 SPI_MASTER_TMR2 SPI_SLAVE_SS_EN SPI_SLAVE_SS_DIS  ]
 [c E1357 0 128 .. ]
@@ -318,152 +330,220 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
 "19 master.c
-[; ;master.c: 19:     config_rcsta();
+[; ;master.c: 19:     setup();
 [p x FOSC  =  EXTRC_NOCLKOUT         ]
 "20
-[; ;master.c: 20:     LCD_init();
+[; ;master.c: 20:     _baudios();
 [p x WDTE  =  OFF        ]
 "21
-[; ;master.c: 21:     clear_LCD();
+[; ;master.c: 21:     config_txsta();
 [p x PWRTE  =  OFF       ]
 "22
-[; ;master.c: 22:     while(1){
+[; ;master.c: 22:     config_rcsta();
 [p x MCLRE  =  OFF       ]
 "23
-[; ;master.c: 23:         contador();
+[; ;master.c: 23:     LCD_init();
 [p x CP  =  OFF          ]
 "24
+[; ;master.c: 24:     clear_LCD();
 [p x CPD  =  OFF         ]
 "25
+[; ;master.c: 25:     while(1){
 [p x BOREN  =  OFF       ]
 "26
+[; ;master.c: 26:         contador();
 [p x IESO  =  OFF        ]
 "27
+[; ;master.c: 27:         ADCread();
 [p x FCMEN  =  OFF       ]
 "28
+[; ;master.c: 28: 
 [p x LVP  =  OFF         ]
 "31
+[; ;master.c: 31:         write_string("S1   S2   S3");
 [p x BOR4V  =  BOR40V    ]
 "32
+[; ;master.c: 32: 
 [p x WRT  =  OFF         ]
 "38
+[; ;master.c: 38:         Write_USART_String("S1   S2   S3");
 [v _cont `uc ~T0 @X0 1 e ]
 [i _cont
 -> -> 0 `i `uc
 ]
+"39
+[; ;master.c: 39:         Write_USART(13);
+[v _V1 `f ~T0 @X0 1 e ]
+[i _V1
+-> -> 0 `i `f
+]
+"40
+[; ;master.c: 40:         Write_USART(10);
+[v _BUFFER `uc ~T0 @X0 -> 20 `i e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"49
+"52
+[; ;master.c: 52:     _delay((unsigned long)((1)*(8000000/4000.0)));
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"50
-[e ( _setup ..  ]
-"51
-[e ( __baudios ..  ]
-"52
-[e ( _config_txsta ..  ]
 "53
-[e ( _config_rcsta ..  ]
+[; ;master.c: 53: 
+[e ( _setup ..  ]
 "54
-[e ( _LCD_init ..  ]
+[; ;master.c: 54:     spiWrite(1);
+[e ( __baudios ..  ]
 "55
-[e ( _clear_LCD ..  ]
+[; ;master.c: 55:     cont = spiRead();
+[e ( _config_txsta ..  ]
 "56
+[; ;master.c: 56: 
+[e ( _config_rcsta ..  ]
+"57
+[; ;master.c: 57:     _delay((unsigned long)((1)*(8000000/4000.0)));
+[e ( _LCD_init ..  ]
+"58
+[; ;master.c: 58:     PORTCbits.RC2 = 1;
+[e ( _clear_LCD ..  ]
+"59
+[; ;master.c: 59:     _delay((unsigned long)((1)*(8000000/4000.0)));
 [e :U 141 ]
 {
-"57
+"60
+[; ;master.c: 60: }
 [e ( _contador ..  ]
-"68
-[; ;master.c: 68:     }
+"61
+[; ;master.c: 61: 
+[e ( _ADCread ..  ]
+"63
+[; ;master.c: 63:     PORTCbits.RC1 = 0;
+[e ( _clear_LCD ..  ]
+"64
+[; ;master.c: 64:     _delay((unsigned long)((1)*(8000000/4000.0)));
+[e ( _set_cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"65
+[; ;master.c: 65: 
+[e ( _write_string (1 :s 1C ]
+"67
+[; ;master.c: 67:     V1 = spiRead();
+[e ( _sprintf (1 , , (. , &U _BUFFER :s 2C -> _V1 `d -> _cont `i ]
+"69
+[; ;master.c: 69:     _delay((unsigned long)((1)*(8000000/4000.0)));
+[e ( _set_cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"70
+[; ;master.c: 70:     PORTCbits.RC1 = 1;
+[e ( _write_string (1 &U _BUFFER ]
+"72
+[; ;master.c: 72: }
+[e ( _Write_USART_String (1 :s 3C ]
+"73
+[; ;master.c: 73: 
+[e ( _Write_USART (1 -> -> 13 `i `uc ]
+"74
+[; ;master.c: 74: 
+[e ( _Write_USART (1 -> -> 10 `i `uc ]
+"76
+[; ;master.c: 76: 
+[e ( _Write_USART_String (1 &U _BUFFER ]
+"77
+[; ;master.c: 77: void setup(void) {
+[e ( _Write_USART (1 -> -> 13 `i `uc ]
+"78
+[; ;master.c: 78:     ANSEL = 0;
+[e ( _Write_USART (1 -> -> 10 `i `uc ]
+"80
+[; ;master.c: 80:     TRISD = 0;
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"81
+[; ;master.c: 81:     TRISE = 0;
 }
 [e :U 140 ]
 [e $U 141  ]
 [e :U 142 ]
-"69
-[; ;master.c: 69: }
+"82
+[; ;master.c: 82:     PORTD = 0;
 [e :UE 139 ]
 }
-"71
-[; ;master.c: 71: void contador (void){
+"84
+[; ;master.c: 84: 
 [v _contador `(v ~T0 @X0 1 ef ]
 {
 [e :U _contador ]
 [f ]
-"72
-[; ;master.c: 72:     PORTCbits.RC2 = 0;
+"85
+[; ;master.c: 85:     TRISC1 = 0;
 [e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"73
-[; ;master.c: 73:     _delay((unsigned long)((1)*(8000000/4000.0)));
+"86
+[; ;master.c: 86:     TRISC2 = 0;
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"74
-[; ;master.c: 74:     spiWrite(1);
+"88
+[; ;master.c: 88:     PORTCbits.RC1 = 1;
 [e ( _spiWrite (1 -> -> 1 `i `uc ]
-"75
-[; ;master.c: 75:     cont = spiRead();
+"89
+[; ;master.c: 89:     spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 [e = _cont -> ( _spiRead ..  `uc ]
-"76
-[; ;master.c: 76:     PORTB = cont;
-[e = _PORTB _cont ]
-"77
-[; ;master.c: 77:     _delay((unsigned long)((1)*(8000000/4000.0)));
+"91
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"78
-[; ;master.c: 78:     PORTCbits.RC2 = 1;
+"92
 [e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-"79
-[; ;master.c: 79:     _delay((unsigned long)((1)*(8000000/4000.0)));
+"93
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"80
-[; ;master.c: 80: }
+"94
 [e :UE 143 ]
 }
-"85
-[; ;master.c: 85: void setup(void) {
+"96
+[v _ADCread `(v ~T0 @X0 1 ef ]
+{
+[e :U _ADCread ]
+[f ]
+"97
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+"98
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"100
+[e ( _spiWrite (1 -> -> 1 `i `uc ]
+"101
+[e = _V1 -> ( _spiRead ..  `f ]
+"103
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"104
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+"105
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"106
+[e :UE 144 ]
+}
+"111
 [v _setup `(v ~T0 @X0 1 ef ]
 {
 [e :U _setup ]
 [f ]
-"86
-[; ;master.c: 86:     ANSEL = 0;
+"112
 [e = _ANSEL -> -> 0 `i `uc ]
-"87
-[; ;master.c: 87:     ANSELH = 0;
+"113
 [e = _ANSELH -> -> 0 `i `uc ]
-"88
-[; ;master.c: 88:     TRISD = 0;
+"114
 [e = _TRISD -> -> 0 `i `uc ]
-"89
-[; ;master.c: 89:     TRISE = 0;
+"115
 [e = _TRISE -> -> 0 `i `uc ]
-"90
-[; ;master.c: 90:     PORTD = 0;
+"116
 [e = _PORTD -> -> 0 `i `uc ]
-"91
-[; ;master.c: 91:     PORTE = 0;
+"117
 [e = _PORTE -> -> 0 `i `uc ]
-"93
-[; ;master.c: 93:     TRISB = 0;
-[e = _TRISB -> -> 0 `i `uc ]
-"94
-[; ;master.c: 94:     PORTB = 0;
-[e = _PORTB -> -> 0 `i `uc ]
-"96
-[; ;master.c: 96:     TRISC1 = 0;
+"119
 [e = _TRISC1 -> -> 0 `i `b ]
-"97
-[; ;master.c: 97:     TRISC2 = 0;
+"120
 [e = _TRISC2 -> -> 0 `i `b ]
-"98
-[; ;master.c: 98:     PORTCbits.RC2 = 1;
+"121
 [e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-"99
-[; ;master.c: 99:     PORTCbits.RC1 = 1;
+"122
 [e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
-"100
-[; ;master.c: 100:     spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+"123
 [e ( _spiInit (4 , , , . `E1349 0 . `E1357 0 . `E1361 1 . `E1365 0 ]
-"101
-[; ;master.c: 101: }
-[e :UE 144 ]
+"124
+[e :UE 145 ]
 }
+[p f _sprintf 8495232 ]
+[a 2C 37 50 46 49 102 32 37 100 0 ]
+[a 1C 83 49 32 32 32 83 50 32 32 32 83 51 0 ]
+[a 3C 83 49 32 32 32 83 50 32 32 32 83 51 0 ]

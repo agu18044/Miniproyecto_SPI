@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
-"100 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
+"123 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
 [e E1349 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -45,10 +45,52 @@ SPI_CLOCK_IDLE_LOW 0
 SPI_IDLE_2_ACTIVE 0
 SPI_ACTIVE_2_IDLE 64
 ]
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"417 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+[v _fround fround `(d  1 s 3 fround ]
+"433
+[v _scale scale `(d  1 s 3 scale ]
+"505
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"60 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fldivl.c
+[v __div_to_l_ _div_to_l_ `(ul  1 e 4 0 ]
 "62 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
+"60 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\ftdivl.c
+[v __tdiv_to_l_ _tdiv_to_l_ `(ul  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"17 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+"27 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"35 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
 "6 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
@@ -59,15 +101,21 @@ SPI_ACTIVE_2_IDLE 64
 [v _CMDs CMDs `(v  1 e 1 0 ]
 "52
 [v _clear_LCD clear_LCD `(v  1 e 1 0 ]
+"57
+[v _set_cursor set_cursor `(v  1 e 1 0 ]
 "69
 [v _LCD_init LCD_init `(v  1 e 1 0 ]
 "89
 [v _write_char write_char `(v  1 e 1 0 ]
-"49 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
+"99
+[v _write_string write_string `(v  1 e 1 0 ]
+"52 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
 [v _main main `(v  1 e 1 0 ]
-"71
+"84
 [v _contador contador `(v  1 e 1 0 ]
-"85
+"96
+[v _ADCread ADCread `(v  1 e 1 0 ]
+"111
 [v _setup setup `(v  1 e 1 0 ]
 "12 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
@@ -85,9 +133,9 @@ SPI_ACTIVE_2_IDLE 64
 [v _config_rcsta config_rcsta `(v  1 e 1 0 ]
 "26
 [v _Write_USART Write_USART `(v  1 e 1 0 ]
-"228 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
-[v _PORTB PORTB `VEuc  1 e 1 @6 ]
-[s S50 . 1 `uc 1 RC0 1 0 :1:0 
+"30
+[v _Write_USART_String Write_USART_String `(v  1 e 1 0 ]
+[s S87 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -96,9 +144,9 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-"307
-[u S59 . 1 `S50 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES59  1 e 1 @7 ]
+"307 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+[u S96 . 1 `S87 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES96  1 e 1 @7 ]
 "352
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
 "414
@@ -107,7 +155,7 @@ SPI_ACTIVE_2_IDLE 64
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
-[s S303 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S338 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -117,31 +165,29 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 SPEN 1 0 :1:7 
 ]
 "1068
-[s S312 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S347 . 1 `uc 1 RCD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S316 . 1 `uc 1 . 1 0 :6:0 
+[s S351 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 nRC8 1 0 :1:6 
 ]
-[s S319 . 1 `uc 1 . 1 0 :6:0 
+[s S354 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[u S322 . 1 `S303 1 . 1 0 `S312 1 . 1 0 `S316 1 . 1 0 `S319 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES322  1 e 1 @24 ]
+[u S357 . 1 `S338 1 . 1 0 `S347 1 . 1 0 `S351 1 . 1 0 `S354 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES357  1 e 1 @24 ]
 "1133
 [v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "1140
 [v _RCREG RCREG `VEuc  1 e 1 @26 ]
-"1478
-[v _TRISB TRISB `VEuc  1 e 1 @134 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "1664
 [v _TRISE TRISE `VEuc  1 e 1 @137 ]
 "2177
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
-[s S156 . 1 `uc 1 BF 1 0 :1:0 
+[s S191 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -151,40 +197,40 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 SMP 1 0 :1:7 
 ]
 "2231
-[s S165 . 1 `uc 1 . 1 0 :2:0 
+[s S200 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D 1 0 :1:5 
 ]
-[s S170 . 1 `uc 1 . 1 0 :2:0 
+[s S205 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DATA 1 0 :1:5 
 ]
-[s S176 . 1 `uc 1 . 1 0 :2:0 
+[s S211 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S181 . 1 `uc 1 . 1 0 :2:0 
+[s S216 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S186 . 1 `uc 1 . 1 0 :2:0 
+[s S221 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S191 . 1 `uc 1 . 1 0 :2:0 
+[s S226 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[u S196 . 1 `S156 1 . 1 0 `S165 1 . 1 0 `S170 1 . 1 0 `S176 1 . 1 0 `S181 1 . 1 0 `S186 1 . 1 0 `S191 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES196  1 e 1 @148 ]
-[s S266 . 1 `uc 1 TX9D 1 0 :1:0 
+[u S231 . 1 `S191 1 . 1 0 `S200 1 . 1 0 `S205 1 . 1 0 `S211 1 . 1 0 `S216 1 . 1 0 `S221 1 . 1 0 `S226 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES231  1 e 1 @148 ]
+[s S301 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -194,15 +240,15 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 CSRC 1 0 :1:7 
 ]
 "2582
-[s S275 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S310 . 1 `uc 1 TXD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 nTX8 1 0 :1:6 
 ]
-[s S279 . 1 `uc 1 . 1 0 :6:0 
+[s S314 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[u S282 . 1 `S266 1 . 1 0 `S275 1 . 1 0 `S279 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES282  1 e 1 @152 ]
+[u S317 . 1 `S301 1 . 1 0 `S310 1 . 1 0 `S314 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES317  1 e 1 @152 ]
 "2642
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "3387
@@ -241,17 +287,285 @@ SPI_ACTIVE_2_IDLE 64
 [v _TRISC5 TRISC5 `VEb  1 e 0 @1085 ]
 "4508
 [v _TRMT TRMT `VEb  1 e 0 @1217 ]
+"358 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+[v _dpowers dpowers `DC[10]ul  1 s 40 dpowers ]
+"7 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\powers.c
+[v __powers_ _powers_ `DC[13]d  1 e 39 0 ]
+"39
+[v __npowers_ _npowers_ `DC[13]d  1 e 39 0 ]
 "38 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
 [v _cont cont `uc  1 e 1 0 ]
-"49
+"39
+[v _V1 V1 `f  1 e 3 0 ]
+"40
+[v _BUFFER BUFFER `[20]uc  1 e 20 0 ]
+"52
 [v _main main `(v  1 e 1 0 ]
 {
-"69
+"82
 } 0
-"85
+"99 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\LCD.c
+[v _write_string write_string `(v  1 e 1 0 ]
+{
+"100
+[v write_string@i i `i  1 a 2 8 ]
+"99
+[v write_string@a a `*.26uc  1 p 2 3 ]
+"103
+} 0
+"89
+[v _write_char write_char `(v  1 e 1 0 ]
+{
+[v write_char@a a `uc  1 a 1 wreg ]
+[v write_char@a a `uc  1 a 1 wreg ]
+[v write_char@a a `uc  1 a 1 2 ]
+"97
+} 0
+"505 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+"545
+[v sprintf@val val `ul  1 a 4 12 ]
+[u S604 . 4 `ul 1 vd 4 0 `d 1 integ 3 0 ]
+"543
+[v sprintf@tmpval tmpval `S604  1 a 4 8 ]
+"533
+[v sprintf@fval fval `d  1 a 3 18 ]
+"517
+[v sprintf@prec prec `i  1 a 2 22 ]
+"534
+[v sprintf@eexp eexp `i  1 a 2 16 ]
+"514
+[v sprintf@width width `i  1 a 2 6 ]
+"525
+[v sprintf@flag flag `us  1 a 2 4 ]
+"512
+[v sprintf@c c `uc  1 a 1 24 ]
+"507
+[v sprintf@ap ap `[1]*.4v  1 a 1 3 ]
+"505
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+[v sprintf@f f `*.24DCuc  1 p 1 59 ]
+"550
+[v sprintf@sp sp `*.4uc  1 a 1 21 ]
+"1567
+} 0
+"433
+[v _scale scale `(d  1 s 3 scale ]
+{
+[v scale@scl scl `c  1 a 1 wreg ]
+[v scale@scl scl `c  1 a 1 wreg ]
+"436
+[v scale@scl scl `c  1 a 1 32 ]
+"449
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"34
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 2 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 1 ]
+[v ___awdiv@counter counter `uc  1 a 1 0 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 7 ]
+[v ___awdiv@dividend dividend `i  1 p 2 9 ]
+"41
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+{
+[v isdigit@c c `uc  1 a 1 wreg ]
+[v isdigit@c c `uc  1 a 1 wreg ]
+"14
+[v isdigit@c c `uc  1 a 1 1 ]
+"15
+} 0
+"417 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+[v _fround fround `(d  1 s 3 fround ]
+{
+[v fround@prec prec `uc  1 a 1 wreg ]
+[v fround@prec prec `uc  1 a 1 wreg ]
+"421
+[v fround@prec prec `uc  1 a 1 39 ]
+"426
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 5 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 0 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 2 ]
+"25
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 11 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 13 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 6 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 8 ]
+"30
+} 0
+"62 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 19 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 23 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 22 ]
+[v ___ftmul@exp exp `uc  1 a 1 18 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 8 ]
+[v ___ftmul@f2 f2 `f  1 p 3 11 ]
+"157
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 6 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 4 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 7 ]
+"51
+} 0
+"60 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\ftdivl.c
+[v __tdiv_to_l_ _tdiv_to_l_ `(ul  1 e 4 0 ]
+{
+"63
+[v __tdiv_to_l_@quot quot `ul  1 a 4 0 ]
+"62
+[v __tdiv_to_l_@exp1 exp1 `uc  1 a 1 5 ]
+[v __tdiv_to_l_@cntr cntr `uc  1 a 1 4 ]
+"60
+[v __tdiv_to_l_@f1 f1 `f  1 p 3 0 ]
+[v __tdiv_to_l_@f2 f2 `f  1 p 3 3 ]
+"101
+} 0
+"60 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fldivl.c
+[v __div_to_l_ _div_to_l_ `(ul  1 e 4 0 ]
+{
+"63
+[v __div_to_l_@quot quot `ul  1 a 4 0 ]
+"62
+[v __div_to_l_@exp1 exp1 `uc  1 a 1 5 ]
+[v __div_to_l_@cntr cntr `uc  1 a 1 4 ]
+"60
+[v __div_to_l_@f1 f1 `d  1 p 3 0 ]
+[v __div_to_l_@f2 f2 `d  1 p 3 3 ]
+"101
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"35 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+{
+"37
+[v ___lltoft@exp exp `uc  1 a 1 13 ]
+"35
+[v ___lltoft@c c `ul  1 p 4 8 ]
+"46
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"10
+[v ___llmod@counter counter `uc  1 a 1 9 ]
+"5
+[v ___llmod@divisor divisor `ul  1 p 4 0 ]
+[v ___llmod@dividend dividend `ul  1 p 4 4 ]
+"25
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"10
+[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
+"11
+[v ___lldiv@counter counter `uc  1 a 1 13 ]
+"5
+[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
+"30
+} 0
+"44 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 42 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 46 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 41 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 33 ]
+"73
+} 0
+"17 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+{
+[v ___ftsub@f2 f2 `f  1 p 3 53 ]
+[v ___ftsub@f1 f1 `f  1 p 3 56 ]
+"26
+} 0
+"86 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 52 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 51 ]
+[v ___ftadd@sign sign `uc  1 a 1 50 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 40 ]
+[v ___ftadd@f2 f2 `f  1 p 3 43 ]
+"148
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+{
+[v ___ftneg@f1 f1 `f  1 p 3 0 ]
+"20
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 0 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 3 ]
+"13
+} 0
+"111 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"101
+"124
 } 0
 "12 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
@@ -265,29 +579,23 @@ SPI_ACTIVE_2_IDLE 64
 [v spiInit@sType sType `E1264  1 a 1 3 ]
 "27
 } 0
-"71 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
+"57 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\LCD.c
+[v _set_cursor set_cursor `(v  1 e 1 0 ]
+{
+[v set_cursor@a a `uc  1 a 1 wreg ]
+"58
+[v set_cursor@x x `uc  1 a 1 7 ]
+"57
+[v set_cursor@a a `uc  1 a 1 wreg ]
+[v set_cursor@b b `uc  1 p 1 4 ]
+"59
+[v set_cursor@a a `uc  1 a 1 6 ]
+"67
+} 0
+"84 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
 [v _contador contador `(v  1 e 1 0 ]
 {
-"80
-} 0
-"34 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\SPI.c
-[v _spiWrite spiWrite `(v  1 e 1 0 ]
-{
-[v spiWrite@dat dat `uc  1 a 1 wreg ]
-[v spiWrite@dat dat `uc  1 a 1 wreg ]
-"36
-[v spiWrite@dat dat `uc  1 a 1 0 ]
-"37
-} 0
-"47
-[v _spiRead spiRead `(uc  1 e 1 0 ]
-{
-"51
-} 0
-"29
-[v _spiReceiveWait spiReceiveWait `(v  1 s 1 spiReceiveWait ]
-{
-"32
+"94
 } 0
 "9 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\USART.c
 [v _config_txsta config_txsta `(v  1 e 1 0 ]
@@ -309,6 +617,23 @@ SPI_ACTIVE_2_IDLE 64
 {
 "7
 } 0
+"30
+[v _Write_USART_String Write_USART_String `(v  1 e 1 0 ]
+{
+"31
+[v Write_USART_String@i i `uc  1 a 1 4 ]
+"30
+[v Write_USART_String@a a `*.26uc  1 p 2 1 ]
+"35
+} 0
+"26
+[v _Write_USART Write_USART `(v  1 e 1 0 ]
+{
+[v Write_USART@a a `uc  1 a 1 wreg ]
+[v Write_USART@a a `uc  1 a 1 wreg ]
+[v Write_USART@a a `uc  1 a 1 0 ]
+"29
+} 0
 "69 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\LCD.c
 [v _LCD_init LCD_init `(v  1 e 1 0 ]
 {
@@ -329,4 +654,45 @@ SPI_ACTIVE_2_IDLE 64
 [v port@a a `uc  1 a 1 wreg ]
 [v port@a a `uc  1 a 1 0 ]
 "40
+} 0
+"96 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
+[v _ADCread ADCread `(v  1 e 1 0 ]
+{
+"106
+} 0
+"34 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\SPI.c
+[v _spiWrite spiWrite `(v  1 e 1 0 ]
+{
+[v spiWrite@dat dat `uc  1 a 1 wreg ]
+[v spiWrite@dat dat `uc  1 a 1 wreg ]
+"36
+[v spiWrite@dat dat `uc  1 a 1 0 ]
+"37
+} 0
+"47
+[v _spiRead spiRead `(uc  1 e 1 0 ]
+{
+"51
+} 0
+"29
+[v _spiReceiveWait spiReceiveWait `(v  1 s 1 spiReceiveWait ]
+{
+"32
+} 0
+"27 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+{
+[v ___lbtoft@c c `uc  1 a 1 wreg ]
+[v ___lbtoft@c c `uc  1 a 1 wreg ]
+"29
+[v ___lbtoft@c c `uc  1 a 1 11 ]
+"30
+} 0
+"62 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
 } 0
