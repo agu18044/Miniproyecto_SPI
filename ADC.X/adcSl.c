@@ -8,6 +8,7 @@
 #include <xc.h>
 #include <stdint.h>
 #include "SPI.h"
+#include "ADC.h"
 
 //******************************************************************************
 //  Palabra de cofiguración
@@ -37,13 +38,15 @@
 //  Prototipos de funciones
 //******************************************************************************
 void setup(void);
+uint8_t ADC;
+float V1;
 
 //*****************************************************************************
 // Código de Interrupción 
 //*****************************************************************************
 void __interrupt() isr(void){
    if(SSPIF == 1){
-        spiWrite();
+        spiWrite(V1);
         SSPIF = 0;
     }
 }
@@ -54,7 +57,8 @@ void __interrupt() isr(void){
 void main(void) {
     setup();
     while(1){
-        
+       ADC = ADCmed(0);
+       V1 = ADC*0.0196;
     }
 }
 
@@ -64,7 +68,9 @@ void main(void) {
 void setup(void) {
     ANSEL = 0;
     ANSELH = 0;
-  
+    TRISA = 0;
+
+    
     INTCONbits.GIE = 1;         // Habilitamos interrupciones
     INTCONbits.PEIE = 1;        // Habilitamos interrupciones PEIE
     PIR1bits.SSPIF = 0;         // Borramos bandera interrupción MSSP
