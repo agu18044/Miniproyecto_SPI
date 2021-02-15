@@ -1,4 +1,4 @@
-# 1 "master.c"
+# 1 "LCD.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,14 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "master.c" 2
-
-
-
-
-
-
-
+# 1 "LCD.c" 2
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2494,7 +2487,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 8 "master.c" 2
+# 1 "LCD.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
@@ -2629,158 +2622,7 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 9 "master.c" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 1 3
-
-
-
-# 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\__size_t.h" 1 3
-
-
-
-typedef unsigned size_t;
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 2 3
-
-# 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\__null.h" 1 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 2 3
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdarg.h" 1 3
-
-
-
-
-
-
-typedef void * va_list[1];
-
-#pragma intrinsic(__va_start)
-extern void * __va_start(void);
-
-#pragma intrinsic(__va_arg)
-extern void * __va_arg(void *, ...);
-# 11 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 2 3
-# 43 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 3
-struct __prbuf
-{
- char * ptr;
- void (* func)(char);
-};
-# 85 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\conio.h" 1 3
-
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\errno.h" 1 3
-# 29 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\errno.h" 3
-extern int errno;
-# 8 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\conio.h" 2 3
-
-
-
-
-extern void init_uart(void);
-
-extern char getch(void);
-extern char getche(void);
-extern void putch(char);
-extern void ungetch(char);
-
-extern __bit kbhit(void);
-
-
-
-extern char * cgets(char *);
-extern void cputs(const char *);
-# 85 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 2 3
-
-
-
-extern int cprintf(char *, ...);
-#pragma printf_check(cprintf)
-
-
-
-extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-# 180 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 3
-#pragma printf_check(vprintf) const
-#pragma printf_check(vsprintf) const
-
-extern char * gets(char *);
-extern int puts(const char *);
-extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
-extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
-extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
-extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
-extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
-extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
-
-#pragma printf_check(printf) const
-#pragma printf_check(sprintf) const
-extern int sprintf(char *, const char *, ...);
-extern int printf(const char *, ...);
-# 10 "master.c" 2
-
-# 1 "./SPI.h" 1
-# 17 "./SPI.h"
-typedef enum
-{
-    SPI_MASTER_OSC_DIV4 = 0b00100000,
-    SPI_MASTER_OSC_DIV16 = 0b00100001,
-    SPI_MASTER_OSC_DIV64 = 0b00100010,
-    SPI_MASTER_TMR2 = 0b00100011,
-    SPI_SLAVE_SS_EN = 0b00100100,
-    SPI_SLAVE_SS_DIS = 0b00100101
-}Spi_Type;
-
-typedef enum
-{
-    SPI_DATA_SAMPLE_MIDDLE = 0b00000000,
-    SPI_DATA_SAMPLE_END = 0b10000000
-}Spi_Data_Sample;
-
-typedef enum
-{
-    SPI_CLOCK_IDLE_HIGH = 0b00010000,
-    SPI_CLOCK_IDLE_LOW = 0b00000000
-}Spi_Clock_Idle;
-
-typedef enum
-{
-    SPI_IDLE_2_ACTIVE = 0b00000000,
-    SPI_ACTIVE_2_IDLE = 0b01000000
-}Spi_Transmit_Edge;
-
-
-void spiInit(Spi_Type, Spi_Data_Sample, Spi_Clock_Idle, Spi_Transmit_Edge);
-void spiWrite(char);
-unsigned spiDataReady();
-char spiRead();
-# 11 "master.c" 2
-
-# 1 "./USART.h" 1
-# 14 "./USART.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
-# 14 "./USART.h" 2
-
-
-void _baudios(void);
-void config_txsta(void);
-void config_rcsta(void);
-
-void Write_USART(uint8_t a);
-void Write_USART_String(char *a);
-uint8_t Read_USART(void);
-# 12 "master.c" 2
+# 2 "LCD.c" 2
 
 # 1 "./LCD.h" 1
 # 47 "./LCD.h"
@@ -2795,84 +2637,105 @@ void set_cursor (uint8_t a, uint8_t b);
 void LCD_init(void);
 void write_char(char a);
 void write_string(char *a);
-# 13 "master.c" 2
+# 3 "LCD.c" 2
 
 
 
 
+void port(uint8_t a){
+    if(a & 1){
+        RD0=1;}
+    else{
+        RD0=0;}
+    if(a & 2){
+        RD1=1;}
+    else{
+        RD1=0;}
+    if(a & 4){
+        RD2=1;}
+    else{
+        RD2=0;}
+    if(a & 8){
+        RD3=1;}
+    else{
+        RD3=0;}
+    if(a & 16){
+        RD4=1;}
+    else{
+        RD4=0;}
+    if(a & 32){
+        RD5=1;}
+    else{
+        RD5=0;}
+    if(a & 64){
+        RD6=1;}
+    else{
+        RD6=0;}
+    if(a & 128){
+        RD7=1;}
+    else{
+        RD7=0;}
+}
 
+void CMDs(uint8_t a){
+    RE0 = 0;
+    port(a);
+    RE1 = 1;
+    _delay((unsigned long)((5)*(4000000/4000000.0)));
+    RE1 = 0;
+    _delay((unsigned long)((5)*(4000000/4000000.0)));
+    _delay((unsigned long)((2)*(4000000/4000.0)));
+}
 
-#pragma config FOSC = EXTRC_NOCLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
+void clear_LCD(void){
+    CMDs(0);
+    CMDs(1);
+}
 
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
-
-
-
-
-
-uint8_t cont = 0;
-
-
-
-
-void setup(void);
-void contador (void);
-
-
-
-
-void main(void) {
-    setup();
-    _baudios();
-    config_txsta();
-    config_rcsta();
-    LCD_init();
-    clear_LCD();
-    while(1){
-        contador();
-# 68 "master.c"
+void set_cursor (uint8_t a, uint8_t b){
+    uint8_t x;
+    if (a == 1){
+       x = 0x80 + b;
+       CMDs(x);
+    }
+    else if (a == 2){
+        x = 0xC0 + b;
+        CMDs(x);
     }
 }
 
-void contador (void){
-    PORTCbits.RC2 = 0;
-    _delay((unsigned long)((1)*(8000000/4000.0)));
-    spiWrite(1);
-    cont = spiRead();
-    PORTB = cont;
-    _delay((unsigned long)((1)*(8000000/4000.0)));
-    PORTCbits.RC2 = 1;
-    _delay((unsigned long)((1)*(8000000/4000.0)));
+void LCD_init(void){
+    _delay((unsigned long)((20)*(4000000/4000.0)));
+    CMDs (0x30);
+    _delay((unsigned long)((5)*(4000000/4000.0)));
+    CMDs (0x30);
+    _delay((unsigned long)((100)*(4000000/4000000.0)));
+    CMDs (0x30);
+    _delay((unsigned long)((100)*(4000000/4000000.0)));
+    CMDs (0x38);
+    _delay((unsigned long)((60)*(4000000/4000000.0)));
+    CMDs (0x08);
+    _delay((unsigned long)((60)*(4000000/4000000.0)));
+    CMDs (0x01);
+    _delay((unsigned long)((5)*(4000000/4000.0)));
+    CMDs (0x06);
+    _delay((unsigned long)((60)*(4000000/4000000.0)));
+    CMDs (0x0C);
+    _delay((unsigned long)((60)*(4000000/4000000.0)));
 }
 
+void write_char(char a){
+    RE0 = 1;
+    port(a);
+    RE1 = 1;
+    _delay((unsigned long)((5)*(4000000/4000000.0)));
+    RE1 = 0;
+    _delay((unsigned long)((5)*(4000000/4000000.0)));
+    _delay((unsigned long)((50)*(4000000/4000000.0)));
+}
 
-
-
-void setup(void) {
-    ANSEL = 0;
-    ANSELH = 0;
-    TRISD = 0;
-    TRISE = 0;
-    PORTD = 0;
-    PORTE = 0;
-
-    TRISB = 0;
-    PORTB = 0;
-
-    TRISC1 = 0;
-    TRISC2 = 0;
-    PORTCbits.RC2 = 1;
-    PORTCbits.RC1 = 1;
-    spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+void write_string(char *a){
+    int i;
+ for(i=0;a[i]!='\0';i++)
+ write_char(a[i]);
 }

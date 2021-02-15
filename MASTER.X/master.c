@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include "SPI.h"
 #include "USART.h"
+#include "LCD.h"
 
 //******************************************************************************
 //  Palabra de cofiguración
@@ -34,20 +35,48 @@
 //  Variables
 //******************************************************************************
 #define _XTAL_FREQ 8000000
+uint8_t cont = 0;
 
 //******************************************************************************
 //  Prototipos de funciones
 //******************************************************************************
 void setup(void);
+void contador (void);
 
 //******************************************************************************
 //  Ciclo principal
 //******************************************************************************
 void main(void) {
     setup();
+    _baudios();
+    config_txsta();
+    config_rcsta();
+    LCD_init();
+    clear_LCD();
     while(1){
-        
+        contador();
+        /*PORTCbits.RC2 = 0;
+        __delay_ms(1);
+       
+        spiWrite(1);
+        cont = spiRead();
+        PORTB = cont;
+       
+        __delay_ms(1);
+        PORTCbits.RC2 = 1;
+        __delay_ms(1); */ 
     }
+}
+
+void contador (void){
+    PORTCbits.RC2 = 0;
+    __delay_ms(1);
+    spiWrite(1);
+    cont = spiRead();
+    PORTB = cont;
+    __delay_ms(1);
+    PORTCbits.RC2 = 1;
+    __delay_ms(1);
 }
 
 //******************************************************************************
@@ -60,6 +89,9 @@ void setup(void) {
     TRISE = 0;
     PORTD = 0;
     PORTE = 0;
+    
+    TRISB = 0;
+    PORTB = 0;
     
     TRISC1 = 0;
     TRISC2 = 0;
