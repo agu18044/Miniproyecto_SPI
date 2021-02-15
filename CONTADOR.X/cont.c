@@ -1,6 +1,6 @@
 /*
  * File:   CONT.c
- * Author: Usuario Dell
+ * Author: Diego Aguilar
  *
  * Created on 14 de febrero de 2021, 11:44 PM
  */
