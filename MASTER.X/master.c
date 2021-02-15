@@ -36,7 +36,8 @@
 //******************************************************************************
 #define _XTAL_FREQ 8000000
 uint8_t cont = 0;
-float V1 = 0;
+uint8_t ADC = 0;
+float V1;
 char BUFFER[20];
 
 //******************************************************************************
@@ -64,7 +65,8 @@ void main(void) {
         set_cursor(1,1);
         write_string("S1   S2   S3");
         
-        sprintf(BUFFER, "%2.1f %d",V1,cont);
+        V1 = ADC*0.0196; 
+        sprintf(BUFFER,"%2.1f   %d", V1,cont);
         
         set_cursor(2,1);
         write_string(BUFFER);
@@ -98,7 +100,7 @@ void ADCread (void){
     __delay_ms(1);
        
     spiWrite(1);
-    V1 = spiRead();
+    ADC = spiRead();
        
     __delay_ms(1);
     PORTCbits.RC1 = 1; 

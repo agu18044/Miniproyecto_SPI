@@ -86,13 +86,7 @@ uint8_t ADCmed(uint8_t ch) {
     ADCON0bits.ADON = 1;    // ADC esta activiado
     __delay_ms(0.25);
     ADCON0bits.GO = 1; // conversion A/D esta en proceso
-    
-    read:
-    if (ADCON0bits.GO_DONE == 1){
-        goto read; 
-    }     
-    else{
-        ADCON0bits.ADON = 0;
-        return ADRESH;  //retorna el valor ADRESH
+    while (ADCON0bits.GO == 1){
+        return ADRESH;
     }
 }

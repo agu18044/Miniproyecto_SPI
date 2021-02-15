@@ -2718,13 +2718,7 @@ uint8_t ADCmed(uint8_t ch) {
     ADCON0bits.ADON = 1;
     _delay((unsigned long)((0.25)*(8000000/4000.0)));
     ADCON0bits.GO = 1;
-
-    read:
-    if (ADCON0bits.GO_DONE == 1){
-        goto read;
-    }
-    else{
-        ADCON0bits.ADON = 0;
+    while (ADCON0bits.GO == 1){
         return ADRESH;
     }
 }

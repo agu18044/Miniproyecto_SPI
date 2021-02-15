@@ -585,36 +585,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "88
 [; ;ADC.c: 88:     ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
-"90
-[; ;ADC.c: 90:     read:
-[e :U 156 ]
-"91
-[; ;ADC.c: 91:     if (ADCON0bits.GO_DONE == 1){
-[e $ ! == -> . . _ADCON0bits 3 1 `i -> 1 `i 157  ]
-{
-"92
-[; ;ADC.c: 92:         goto read;
+"89
+[; ;ADC.c: 89:     while (ADCON0bits.GO == 1){
 [e $U 156  ]
-"93
-[; ;ADC.c: 93:     }
-}
-[e $U 158  ]
-"94
-[; ;ADC.c: 94:     else{
 [e :U 157 ]
 {
-"95
-[; ;ADC.c: 95:         ADCON0bits.ADON = 0;
-[e = . . _ADCON0bits 0 0 -> -> 0 `i `uc ]
-"96
-[; ;ADC.c: 96:         return ADRESH;
+"90
+[; ;ADC.c: 90:         return ADRESH;
 [e ) _ADRESH ]
 [e $UE 138  ]
-"97
-[; ;ADC.c: 97:     }
+"91
+[; ;ADC.c: 91:     }
 }
+[e :U 156 ]
+"89
+[; ;ADC.c: 89:     while (ADCON0bits.GO == 1){
+[e $ == -> . . _ADCON0bits 1 1 `i -> 1 `i 157  ]
 [e :U 158 ]
-"98
-[; ;ADC.c: 98: }
+"92
+[; ;ADC.c: 92: }
 [e :UE 138 ]
 }

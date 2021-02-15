@@ -2698,15 +2698,15 @@ uint8_t ADCmed(uint8_t ch);
 #pragma config WRT = OFF
 # 40 "adcSl.c"
 void setup(void);
-uint8_t ADC;
-float V1;
+uint8_t ADC=0;
+
 
 
 
 
 void __attribute__((picinterrupt(("")))) isr(void){
    if(SSPIF == 1){
-        spiWrite(V1);
+        spiWrite(ADC);
         SSPIF = 0;
     }
 }
@@ -2717,8 +2717,7 @@ void __attribute__((picinterrupt(("")))) isr(void){
 void main(void) {
     setup();
     while(1){
-       ADC = ADCmed(0);
-       V1 = ADC*0.0196;
+       ADC = ADCmed(8);
     }
 }
 
@@ -2728,8 +2727,10 @@ void main(void) {
 void setup(void) {
     ANSEL = 0;
     ANSELH = 0;
-    TRISA = 0;
 
+
+
+    TRISB = 0;
 
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;

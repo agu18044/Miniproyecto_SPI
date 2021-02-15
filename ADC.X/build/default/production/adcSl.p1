@@ -20,9 +20,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3449
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3449: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
 [v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
-"1416
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1416: extern volatile unsigned char TRISA __attribute__((address(0x085)));
-[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"1478
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1478: extern volatile unsigned char TRISB __attribute__((address(0x086)));
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
 "465
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 465:     struct {
 [s S16 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -71,8 +71,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1433
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1433: extern volatile TRISAbits_t TRISAbits __attribute__((address(0x085)));
 [v _TRISAbits `VS52 ~T0 @X0 0 e@133 ]
-"79 adcSl.c
-[; ;adcSl.c: 79:     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+"80 adcSl.c
+[; ;adcSl.c: 80:     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 [c E1292 32 33 34 35 36 37 .. ]
 [n E1292 . SPI_MASTER_OSC_DIV4 SPI_MASTER_OSC_DIV16 SPI_MASTER_OSC_DIV64 SPI_MASTER_TMR2 SPI_SLAVE_SS_EN SPI_SLAVE_SS_DIS  ]
 [c E1300 0 128 .. ]
@@ -343,11 +343,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "30
 [p x WRT  =  OFF         ]
 "41
-[; ;adcSl.c: 41: uint8_t ADC;
+[; ;adcSl.c: 41: uint8_t ADC=0;
 [v _ADC `uc ~T0 @X0 1 e ]
-"42
-[; ;adcSl.c: 42: float V1;
-[v _V1 `f ~T0 @X0 1 e ]
+[i _ADC
+-> -> 0 `i `uc
+]
 [v $root$_isr `(v ~T0 @X0 0 e ]
 "47
 [; ;adcSl.c: 47: void __attribute__((picinterrupt(("")))) isr(void){
@@ -360,8 +360,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> _SSPIF `i -> 1 `i 139  ]
 {
 "49
-[; ;adcSl.c: 49:         spiWrite(V1);
-[e ( _spiWrite (1 -> _V1 `uc ]
+[; ;adcSl.c: 49:         spiWrite(ADC);
+[e ( _spiWrite (1 -> _ADC `uc ]
 "50
 [; ;adcSl.c: 50:         SSPIF = 0;
 [e = _SSPIF -> -> 0 `i `b ]
@@ -388,55 +388,52 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 142 ]
 {
 "60
-[; ;adcSl.c: 60:        ADC = ADCmed(0);
-[e = _ADC ( _ADCmed (1 -> -> 0 `i `uc ]
+[; ;adcSl.c: 60:        ADC = ADCmed(8);
+[e = _ADC ( _ADCmed (1 -> -> 8 `i `uc ]
 "61
-[; ;adcSl.c: 61:        V1 = ADC*0.0196;
-[e = _V1 -> * -> -> _ADC `i `d .0.0196 `f ]
-"62
-[; ;adcSl.c: 62:     }
+[; ;adcSl.c: 61:     }
 }
 [e :U 141 ]
 [e $U 142  ]
 [e :U 143 ]
-"63
-[; ;adcSl.c: 63: }
+"62
+[; ;adcSl.c: 62: }
 [e :UE 140 ]
 }
-"68
-[; ;adcSl.c: 68: void setup(void) {
+"67
+[; ;adcSl.c: 67: void setup(void) {
 [v _setup `(v ~T0 @X0 1 ef ]
 {
 [e :U _setup ]
 [f ]
-"69
-[; ;adcSl.c: 69:     ANSEL = 0;
+"68
+[; ;adcSl.c: 68:     ANSEL = 0;
 [e = _ANSEL -> -> 0 `i `uc ]
-"70
-[; ;adcSl.c: 70:     ANSELH = 0;
+"69
+[; ;adcSl.c: 69:     ANSELH = 0;
 [e = _ANSELH -> -> 0 `i `uc ]
-"71
-[; ;adcSl.c: 71:     TRISA = 0;
-[e = _TRISA -> -> 0 `i `uc ]
-"74
-[; ;adcSl.c: 74:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"73
+[; ;adcSl.c: 73:     TRISB = 0;
+[e = _TRISB -> -> 0 `i `uc ]
 "75
-[; ;adcSl.c: 75:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+[; ;adcSl.c: 75:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "76
-[; ;adcSl.c: 76:     PIR1bits.SSPIF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;adcSl.c: 76:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
 "77
-[; ;adcSl.c: 77:     PIE1bits.SSPIE = 1;
-[e = . . _PIE1bits 0 3 -> -> 1 `i `uc ]
+[; ;adcSl.c: 77:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "78
-[; ;adcSl.c: 78:     TRISAbits.TRISA5 = 1;
-[e = . . _TRISAbits 0 5 -> -> 1 `i `uc ]
+[; ;adcSl.c: 78:     PIE1bits.SSPIE = 1;
+[e = . . _PIE1bits 0 3 -> -> 1 `i `uc ]
 "79
-[; ;adcSl.c: 79:     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
-[e ( _spiInit (4 , , , . `E1292 4 . `E1300 0 . `E1304 1 . `E1308 0 ]
+[; ;adcSl.c: 79:     TRISAbits.TRISA5 = 1;
+[e = . . _TRISAbits 0 5 -> -> 1 `i `uc ]
 "80
-[; ;adcSl.c: 80: }
+[; ;adcSl.c: 80:     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+[e ( _spiInit (4 , , , . `E1292 4 . `E1300 0 . `E1304 1 . `E1308 0 ]
+"81
+[; ;adcSl.c: 81: }
 [e :UE 144 ]
 }

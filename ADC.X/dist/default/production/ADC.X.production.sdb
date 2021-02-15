@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
-"79 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\ADC.X\adcSl.c
+"80 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\ADC.X\adcSl.c
 [e E1292 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -51,18 +51,12 @@ SPI_ACTIVE_2_IDLE 64
 [v _isr isr `II(v  1 e 1 0 ]
 "57
 [v _main main `(v  1 e 1 0 ]
-"68
+"67
 [v _setup setup `(v  1 e 1 0 ]
-"32 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awtoft.c
-[v ___awtoft __awtoft `(f  1 e 3 0 ]
 "62 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"62 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\ftmul.c
-[v ___ftmul __ftmul `(f  1 e 3 0 ]
-"44 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fttol.c
-[v ___fttol __fttol `(l  1 e 4 0 ]
 "6 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
@@ -75,8 +69,6 @@ SPI_ACTIVE_2_IDLE 64
 [v _spiWrite spiWrite `(v  1 e 1 0 ]
 "41 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\ADC.X\adcSl.c
 [v _ADC ADC `uc  1 e 1 0 ]
-"42
-[v _V1 V1 `f  1 e 3 0 ]
 [s S40 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
@@ -111,13 +103,13 @@ SPI_ACTIVE_2_IDLE 64
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
 "1238
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
-[s S327 . 1 `uc 1 ADON 1 0 :1:0 
+[s S326 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 `uc 1 ADCS 1 0 :2:6 
 ]
 "1276
-[s S332 . 1 `uc 1 . 1 0 :1:0 
+[s S331 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -126,16 +118,14 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 ADCS0 1 0 :1:6 
 `uc 1 ADCS1 1 0 :1:7 
 ]
-[s S341 . 1 `uc 1 . 1 0 :1:0 
+[s S340 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S344 . 1 `uc 1 . 1 0 :1:0 
+[s S343 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[u S347 . 1 `S327 1 . 1 0 `S332 1 . 1 0 `S341 1 . 1 0 `S344 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES347  1 e 1 @31 ]
-"1416
-[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+[u S346 . 1 `S326 1 . 1 0 `S331 1 . 1 0 `S340 1 . 1 0 `S343 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES346  1 e 1 @31 ]
 [s S110 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
@@ -148,7 +138,9 @@ SPI_ACTIVE_2_IDLE 64
 "1433
 [u S119 . 1 `S110 1 . 1 0 ]
 [v _TRISAbits TRISAbits `VES119  1 e 1 @133 ]
-[s S420 . 1 `uc 1 TRISB0 1 0 :1:0 
+"1478
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+[s S419 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -158,16 +150,16 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "1495
-[u S429 . 1 `S420 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES429  1 e 1 @134 ]
-[s S407 . 1 `uc 1 TRISE0 1 0 :1:0 
+[u S428 . 1 `S419 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES428  1 e 1 @134 ]
+[s S406 . 1 `uc 1 TRISE0 1 0 :1:0 
 `uc 1 TRISE1 1 0 :1:1 
 `uc 1 TRISE2 1 0 :1:2 
 `uc 1 TRISE3 1 0 :1:3 
 ]
 "1677
-[u S412 . 1 `S407 1 . 1 0 ]
-[v _TRISEbits TRISEbits `VES412  1 e 1 @137 ]
+[u S411 . 1 `S406 1 . 1 0 ]
+[v _TRISEbits TRISEbits `VES411  1 e 1 @137 ]
 [s S91 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
@@ -181,7 +173,7 @@ SPI_ACTIVE_2_IDLE 64
 [v _PIE1bits PIE1bits `VES99  1 e 1 @140 ]
 "2177
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
-[s S218 . 1 `uc 1 BF 1 0 :1:0 
+[s S217 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -191,44 +183,44 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 SMP 1 0 :1:7 
 ]
 "2231
-[s S227 . 1 `uc 1 . 1 0 :2:0 
+[s S226 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D 1 0 :1:5 
 ]
-[s S232 . 1 `uc 1 . 1 0 :2:0 
+[s S231 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DATA 1 0 :1:5 
 ]
-[s S238 . 1 `uc 1 . 1 0 :2:0 
+[s S237 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S243 . 1 `uc 1 . 1 0 :2:0 
+[s S242 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S248 . 1 `uc 1 . 1 0 :2:0 
+[s S247 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S253 . 1 `uc 1 . 1 0 :2:0 
+[s S252 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[u S258 . 1 `S218 1 . 1 0 `S227 1 . 1 0 `S232 1 . 1 0 `S238 1 . 1 0 `S243 1 . 1 0 `S248 1 . 1 0 `S253 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES258  1 e 1 @148 ]
+[u S257 . 1 `S217 1 . 1 0 `S226 1 . 1 0 `S231 1 . 1 0 `S237 1 . 1 0 `S242 1 . 1 0 `S247 1 . 1 0 `S252 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES257  1 e 1 @148 ]
 "2977
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
-[s S386 . 1 `uc 1 ANS0 1 0 :1:0 
+[s S385 . 1 `uc 1 ANS0 1 0 :1:0 
 `uc 1 ANS1 1 0 :1:1 
 `uc 1 ANS2 1 0 :1:2 
 `uc 1 ANS3 1 0 :1:3 
@@ -238,11 +230,11 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 ANS7 1 0 :1:7 
 ]
 "3404
-[u S395 . 1 `S386 1 . 1 0 ]
-[v _ANSELbits ANSELbits `VES395  1 e 1 @392 ]
+[u S394 . 1 `S385 1 . 1 0 ]
+[v _ANSELbits ANSELbits `VES394  1 e 1 @392 ]
 "3449
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-[s S441 . 1 `uc 1 ANS8 1 0 :1:0 
+[s S440 . 1 `uc 1 ANS8 1 0 :1:0 
 `uc 1 ANS9 1 0 :1:1 
 `uc 1 ANS10 1 0 :1:2 
 `uc 1 ANS11 1 0 :1:3 
@@ -250,8 +242,8 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 ANS13 1 0 :1:5 
 ]
 "3464
-[u S448 . 1 `S441 1 . 1 0 ]
-[v _ANSELHbits ANSELHbits `VES448  1 e 1 @393 ]
+[u S447 . 1 `S440 1 . 1 0 ]
+[v _ANSELHbits ANSELHbits `VES447  1 e 1 @393 ]
 "4277
 [v _SSPIF SSPIF `VEb  1 e 0 @99 ]
 "4457
@@ -261,63 +253,32 @@ SPI_ACTIVE_2_IDLE 64
 "57 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\ADC.X\adcSl.c
 [v _main main `(v  1 e 1 0 ]
 {
-"63
+"62
 } 0
-"68
+"67
 [v _setup setup `(v  1 e 1 0 ]
 {
-"80
+"81
 } 0
 "12 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\ADC.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
 {
 [v spiInit@sType sType `E1264  1 a 1 wreg ]
 [v spiInit@sType sType `E1264  1 a 1 wreg ]
-[v spiInit@sDataSample sDataSample `E1272  1 p 1 2 ]
-[v spiInit@sClockIdle sClockIdle `E1276  1 p 1 3 ]
-[v spiInit@sTransmitEdge sTransmitEdge `E1280  1 p 1 4 ]
+[v spiInit@sDataSample sDataSample `E1272  1 p 1 3 ]
+[v spiInit@sClockIdle sClockIdle `E1276  1 p 1 4 ]
+[v spiInit@sTransmitEdge sTransmitEdge `E1280  1 p 1 5 ]
 "14
-[v spiInit@sType sType `E1264  1 a 1 5 ]
+[v spiInit@sType sType `E1264  1 a 1 6 ]
 "27
-} 0
-"62 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\ftmul.c
-[v ___ftmul __ftmul `(f  1 e 3 0 ]
-{
-"65
-[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 27 ]
-"64
-[v ___ftmul@sign sign `uc  1 a 1 31 ]
-[v ___ftmul@cntr cntr `uc  1 a 1 30 ]
-[v ___ftmul@exp exp `uc  1 a 1 26 ]
-"62
-[v ___ftmul@f1 f1 `f  1 p 3 16 ]
-[v ___ftmul@f2 f2 `f  1 p 3 19 ]
-"157
-} 0
-"32 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awtoft.c
-[v ___awtoft __awtoft `(f  1 e 3 0 ]
-{
-"34
-[v ___awtoft@sign sign `uc  1 a 1 15 ]
-"32
-[v ___awtoft@c c `i  1 p 2 10 ]
-"42
-} 0
-"62 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\float.c
-[v ___ftpack __ftpack `(f  1 e 3 0 ]
-{
-[v ___ftpack@arg arg `um  1 p 3 2 ]
-[v ___ftpack@exp exp `uc  1 p 1 5 ]
-[v ___ftpack@sign sign `uc  1 p 1 6 ]
-"86
 } 0
 "7 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\ADC.X\ADC.c
 [v _ADCmed ADCmed `(uc  1 e 1 0 ]
 {
 [v ADCmed@ch ch `uc  1 a 1 wreg ]
 [v ADCmed@ch ch `uc  1 a 1 wreg ]
-[v ADCmed@ch ch `uc  1 a 1 4 ]
-"98
+[v ADCmed@ch ch `uc  1 a 1 5 ]
+"92
 } 0
 "47 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\ADC.X\adcSl.c
 [v _isr isr `II(v  1 e 1 0 ]
@@ -332,16 +293,4 @@ SPI_ACTIVE_2_IDLE 64
 "36
 [v spiWrite@dat dat `uc  1 a 1 0 ]
 "37
-} 0
-"44 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fttol.c
-[v ___fttol __fttol `(l  1 e 4 0 ]
-{
-"47
-[v ___fttol@lval lval `ul  1 a 4 9 ]
-"46
-[v ___fttol@exp1 exp1 `uc  1 a 1 13 ]
-[v ___fttol@sign1 sign1 `uc  1 a 1 8 ]
-"44
-[v ___fttol@f1 f1 `f  1 p 3 0 ]
-"73
 } 0

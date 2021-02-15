@@ -38,15 +38,15 @@
 //  Prototipos de funciones
 //******************************************************************************
 void setup(void);
-uint8_t ADC;
-float V1;
+uint8_t ADC=0;
+//float V1=0;
 
 //*****************************************************************************
 // Código de Interrupción 
 //*****************************************************************************
 void __interrupt() isr(void){
    if(SSPIF == 1){
-        spiWrite(V1);
+        spiWrite(ADC);
         SSPIF = 0;
     }
 }
@@ -57,8 +57,7 @@ void __interrupt() isr(void){
 void main(void) {
     setup();
     while(1){
-       ADC = ADCmed(0);
-       V1 = ADC*0.0196;
+       ADC = ADCmed(8);
     }
 }
 
@@ -68,9 +67,11 @@ void main(void) {
 void setup(void) {
     ANSEL = 0;
     ANSELH = 0;
-    TRISA = 0;
 
-    
+    //TRISAbits.TRISA0 = 0;
+
+    TRISB = 0;
+
     INTCONbits.GIE = 1;         // Habilitamos interrupciones
     INTCONbits.PEIE = 1;        // Habilitamos interrupciones PEIE
     PIR1bits.SSPIF = 0;         // Borramos bandera interrupción MSSP
