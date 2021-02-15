@@ -2703,7 +2703,6 @@ uint8_t ADC=0;
 
 
 
-
 void __attribute__((picinterrupt(("")))) isr(void){
    if(SSPIF == 1){
         spiWrite(ADC);
@@ -2727,7 +2726,6 @@ void main(void) {
 void setup(void) {
     ANSEL = 0;
     ANSELH = 0;
-
 
 
     TRISB = 0;

@@ -363,7 +363,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;master.c: 31:         set_cursor(1,1);
 [p x BOR4V  =  BOR40V    ]
 "32
-[; ;master.c: 32:         write_string("S1   S2   S3");
+[; ;master.c: 32:         write_string(" S1   S2   S3");
 [p x WRT  =  OFF         ]
 "38
 [; ;master.c: 38:         write_string(BUFFER);
@@ -550,6 +550,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 145 ]
 }
 [p f _sprintf 8495232 ]
-[a 2C 37 50 46 49 102 32 32 32 37 100 0 ]
-[a 1C 83 49 32 32 32 83 50 32 32 32 83 51 0 ]
+[a 2C 37 50 46 49 102 32 32 37 100 0 ]
+[a 1C 32 83 49 32 32 32 83 50 32 32 32 83 51 0 ]
 [a 3C 83 49 32 32 32 83 50 32 32 32 83 51 0 ]

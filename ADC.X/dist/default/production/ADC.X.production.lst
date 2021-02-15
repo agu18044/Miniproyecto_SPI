@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Mon Feb 15 16:46:13 2021
+                                                                                               Mon Feb 15 16:50:29 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	16F887
@@ -487,7 +487,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    473 ;;
    474 ;; *************** function _main *****************
    475 ;; Defined at:
-   476 ;;		line 57 in file "adcSl.c"
+   476 ;;		line 56 in file "adcSl.c"
    477 ;; Parameters:    Size  Location     Type
    478 ;;		None
    479 ;; Auto vars:     Size  Location     Type
@@ -523,11 +523,11 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    509                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
    510                           
    511                           
-   512                           ;adcSl.c: 58:     setup();
+   512                           ;adcSl.c: 57:     setup();
    513  0144  120A  118A  20FE  120A  118A  	fcall	_setup
    514  0149                     l809:
    515                           
-   516                           ;adcSl.c: 60:        ADC = ADCmed(8);
+   516                           ;adcSl.c: 59:        ADC = ADCmed(8);
    517  0149  3008               	movlw	8
    518  014A  120A  118A  2014  120A  118A  	fcall	_ADCmed
    519  014F  00F7               	movwf	??_main
@@ -541,7 +541,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    527  00FE                     __ptext1:	
    528 ;; *************** function _setup *****************
    529 ;; Defined at:
-   530 ;;		line 67 in file "adcSl.c"
+   530 ;;		line 66 in file "adcSl.c"
    531 ;; Parameters:    Size  Location     Type
    532 ;;		None
    533 ;; Auto vars:     Size  Location     Type
@@ -577,45 +577,45 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    563                           ; Regs used in _setup: [wreg+status,2+status,0+pclath+cstack]
    564                           
    565                           
-   566                           ;adcSl.c: 68:     ANSEL = 0;
+   566                           ;adcSl.c: 67:     ANSEL = 0;
    567  00FE  1683               	bsf	3,5	;RP0=1, select bank3
    568  00FF  1703               	bsf	3,6	;RP1=1, select bank3
    569  0100  0188               	clrf	8	;volatile
    570                           
-   571                           ;adcSl.c: 69:     ANSELH = 0;
+   571                           ;adcSl.c: 68:     ANSELH = 0;
    572  0101  0189               	clrf	9	;volatile
    573                           
-   574                           ;adcSl.c: 73:     TRISB = 0;
+   574                           ;adcSl.c: 71:     TRISB = 0;
    575  0102  1683               	bsf	3,5	;RP0=1, select bank1
    576  0103  1303               	bcf	3,6	;RP1=0, select bank1
    577  0104  0186               	clrf	6	;volatile
    578  0105                     l795:
    579                           
-   580                           ;adcSl.c: 75:     INTCONbits.GIE = 1;
+   580                           ;adcSl.c: 73:     INTCONbits.GIE = 1;
    581  0105  178B               	bsf	11,7	;volatile
    582  0106                     l797:
    583                           
-   584                           ;adcSl.c: 76:     INTCONbits.PEIE = 1;
+   584                           ;adcSl.c: 74:     INTCONbits.PEIE = 1;
    585  0106  170B               	bsf	11,6	;volatile
    586  0107                     l799:
    587                           
-   588                           ;adcSl.c: 77:     PIR1bits.SSPIF = 0;
+   588                           ;adcSl.c: 75:     PIR1bits.SSPIF = 0;
    589  0107  1283               	bcf	3,5	;RP0=0, select bank0
    590  0108  1303               	bcf	3,6	;RP1=0, select bank0
    591  0109  118C               	bcf	12,3	;volatile
    592  010A                     l801:
    593                           
-   594                           ;adcSl.c: 78:     PIE1bits.SSPIE = 1;
+   594                           ;adcSl.c: 76:     PIE1bits.SSPIE = 1;
    595  010A  1683               	bsf	3,5	;RP0=1, select bank1
    596  010B  1303               	bcf	3,6	;RP1=0, select bank1
    597  010C  158C               	bsf	12,3	;volatile
    598  010D                     l803:
    599                           
-   600                           ;adcSl.c: 79:     TRISAbits.TRISA5 = 1;
+   600                           ;adcSl.c: 77:     TRISAbits.TRISA5 = 1;
    601  010D  1685               	bsf	5,5	;volatile
    602  010E                     l805:
    603                           
-   604                           ;adcSl.c: 80:     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, S
+   604                           ;adcSl.c: 78:     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, S
       +                          PI_IDLE_2_ACTIVE);
    605  010E  01F3               	clrf	spiInit@sDataSample
    606  010F  01F4               	clrf	spiInit@sClockIdle
@@ -1223,7 +1223,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1206  012E                     __ptext4:	
   1207 ;; *************** function _isr *****************
   1208 ;; Defined at:
-  1209 ;;		line 47 in file "adcSl.c"
+  1209 ;;		line 46 in file "adcSl.c"
   1210 ;; Parameters:    Size  Location     Type
   1211 ;;		None
   1212 ;; Auto vars:     Size  Location     Type
@@ -1256,7 +1256,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1239  012E                     _isr:
   1240  012E                     i1l731:
   1241                           
-  1242                           ;adcSl.c: 48:    if(SSPIF == 1){
+  1242                           ;adcSl.c: 47:    if(SSPIF == 1){
   1243  012E  1283               	bcf	3,5	;RP0=0, select bank0
   1244  012F  1303               	bcf	3,6	;RP1=0, select bank0
   1245  0130  1D8C               	btfss	12,3	;volatile
@@ -1267,12 +1267,12 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1250  0134                     u4_20:
   1251  0134                     i1l733:
   1252                           
-  1253                           ;adcSl.c: 49:         spiWrite(ADC);
+  1253                           ;adcSl.c: 48:         spiWrite(ADC);
   1254  0134  0878               	movf	_ADC,w
   1255  0135  120A  118A  2156  120A  118A  	fcall	_spiWrite
   1256  013A                     i1l735:
   1257                           
-  1258                           ;adcSl.c: 50:         SSPIF = 0;
+  1258                           ;adcSl.c: 49:         SSPIF = 0;
   1259  013A  1283               	bcf	3,5	;RP0=0, select bank0
   1260  013B  1303               	bcf	3,6	;RP1=0, select bank0
   1261  013C  118C               	bcf	12,3	;volatile
@@ -1521,7 +1521,7 @@ DATA                 0      0       9      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Mon Feb 15 16:46:13 2021
+Symbol Table                                                                                   Mon Feb 15 16:50:29 2021
 
             _SSPSTATbits 0094                       l43 0117                       l60 012D  
                      l59 0128                       l99 001F                       u20 00FD  

@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\MASTER.X.production.sym \
   --cmf=dist/default/production\MASTER.X.production.cmf -z -Q16F887 \
-  -oC:\Users\USUARI~1\AppData\Local\Temp\sc94.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\USUARI~1\AppData\Local\Temp\sc3c.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/MASTER.X.production.map -E1 -ver=XC8 Compiler \
   -ASTACK=0110h-016Fh -pstack=STACK -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
   -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\USUARI~1\AppData\Local\Temp\sc94.o \
+  -pfunctab=ENTRY -k C:\Users\USUARI~1\AppData\Local\Temp\sc3c.o \
   dist/default/production\MASTER.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\USUARI~1\AppData\Local\Temp\sc94.o
+C:\Users\USUARI~1\AppData\Local\Temp\sc3c.o
                 end_init                              0        0        3        0       0
                 config                             2007     2007        2        0       4
 dist/default/production\MASTER.X.production.o
@@ -763,7 +763,7 @@ Total ram usage:        3 bytes
 		line 99 in file "LCD.c"
  Parameters:    Size  Location     Type
   a               2    3[COMMON] PTR unsigned char 
-		 -> BUFFER(20), STR_1(13), 
+		 -> BUFFER(20), STR_1(14), 
  Auto vars:     Size  Location     Type
   i               2    8[COMMON] int 
  Return value:  Size  Location     Type
@@ -826,7 +826,7 @@ Total ram usage:        2 bytes
   sp              1    wreg     PTR unsigned char 
 		 -> BUFFER(20), 
   f               1   59[BANK0 ] PTR const unsigned char 
-		 -> STR_2(11), 
+		 -> STR_2(10), 
  Auto vars:     Size  Location     Type
   sp              1   21[BANK1 ] PTR unsigned char 
 		 -> BUFFER(20), 

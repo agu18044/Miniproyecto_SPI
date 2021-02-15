@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Mon Feb 15 16:30:39 2021
+                                                                                               Mon Feb 15 16:53:05 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	16F887
@@ -678,32 +678,32 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    664  0189                     _ANSELH	set	393
    665  0188                     _ANSEL	set	392
    666  1086                     STR_1:
-   667  1086  3453               	retlw	83	;'S'
-   668  1087  3431               	retlw	49	;'1'
-   669  1088  3420               	retlw	32	;' '
+   667  1086  3420               	retlw	32	;' '
+   668  1087  3453               	retlw	83	;'S'
+   669  1088  3431               	retlw	49	;'1'
    670  1089  3420               	retlw	32	;' '
    671  108A  3420               	retlw	32	;' '
-   672  108B  3453               	retlw	83	;'S'
-   673  108C  3432               	retlw	50	;'2'
-   674  108D  3420               	retlw	32	;' '
+   672  108B  3420               	retlw	32	;' '
+   673  108C  3453               	retlw	83	;'S'
+   674  108D  3432               	retlw	50	;'2'
    675  108E  3420               	retlw	32	;' '
    676  108F  3420               	retlw	32	;' '
-   677  1090  3453               	retlw	83	;'S'
-   678  1091  3433               	retlw	51	;'3'
-   679  1092  3400               	retlw	0
-   680  1093                     STR_2:
-   681  1093  3425               	retlw	37	;'%'
-   682  1094  3432               	retlw	50	;'2'
-   683  1095  342E               	retlw	46	;'.'
-   684  1096  3431               	retlw	49	;'1'
-   685  1097  3466               	retlw	102	;'f'
-   686  1098  3420               	retlw	32	;' '
+   677  1090  3420               	retlw	32	;' '
+   678  1091  3453               	retlw	83	;'S'
+   679  1092  3433               	retlw	51	;'3'
+   680  1093  3400               	retlw	0
+   681  1094                     STR_2:
+   682  1094  3425               	retlw	37	;'%'
+   683  1095  3432               	retlw	50	;'2'
+   684  1096  342E               	retlw	46	;'.'
+   685  1097  3431               	retlw	49	;'1'
+   686  1098  3466               	retlw	102	;'f'
    687  1099  3420               	retlw	32	;' '
    688  109A  3420               	retlw	32	;' '
    689  109B  3425               	retlw	37	;'%'
    690  109C  3464               	retlw	100	;'d'
    691  109D  3400               	retlw	0
-   692  1086                     
+   692  1087                     
    693                           	psect	cinit
    694  07EC                     start_initialization:	
    695                           ; #config settings
@@ -1531,7 +1531,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1517  0877  00EC               	movwf	_V1+2
   1518                           
   1519                           ;master.c: 69:     ADC = spiRead();
-  1520  0878  3084               	movlw	(low ((STR_2-__stringbase)| (0+32768)))& (0+255)
+  1520  0878  3085               	movlw	(low ((STR_2-__stringbase)| (0+32768)))& (0+255)
   1521  0879  00E7               	movwf	??_main
   1522  087A  0867               	movf	??_main,w
   1523  087B  00DB               	movwf	sprintf@f
@@ -1568,7 +1568,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1554  08A0                     l3182:
   1555                           
   1556                           ;master.c: 74: }
-  1557  08A0  3077               	movlw	(low ((STR_1-__stringbase)| (0+32768)))& (0+255)
+  1557  08A0  3078               	movlw	(low (((STR_1+1)-__stringbase)| (0+32768)))& (0+255)
   1558  08A1  00F1               	movwf	Write_USART_String@a
   1559  08A2  3080               	movlw	128
   1560  08A3  00F2               	movwf	Write_USART_String@a+1
@@ -1628,7 +1628,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1614 ;;		line 99 in file "LCD.c"
   1615 ;; Parameters:    Size  Location     Type
   1616 ;;  a               2    3[COMMON] PTR unsigned char 
-  1617 ;;		 -> BUFFER(20), STR_1(13), 
+  1617 ;;		 -> BUFFER(20), STR_1(14), 
   1618 ;; Auto vars:     Size  Location     Type
   1619 ;;  i               2    8[COMMON] int 
   1620 ;; Return value:  Size  Location     Type
@@ -1826,7 +1826,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1812 ;;  sp              1    wreg     PTR unsigned char 
   1813 ;;		 -> BUFFER(20), 
   1814 ;;  f               1   59[BANK0 ] PTR const unsigned char 
-  1815 ;;		 -> STR_2(11), 
+  1815 ;;		 -> STR_2(10), 
   1816 ;; Auto vars:     Size  Location     Type
   1817 ;;  sp              1   21[BANK1 ] PTR unsigned char 
   1818 ;;		 -> BUFFER(20), 
@@ -10492,8 +10492,8 @@ Auto Spaces:
 
 Pointer List with Targets:
 
-    sprintf@f	PTR const unsigned char  size(1) Largest target is 11
-		 -> STR_2(CODE[11]), 
+    sprintf@f	PTR const unsigned char  size(1) Largest target is 10
+		 -> STR_2(CODE[10]), 
 
     sprintf@sp	PTR unsigned char  size(1) Largest target is 20
 		 -> BUFFER(BANK1[20]), 
@@ -10502,7 +10502,7 @@ Pointer List with Targets:
 		 -> ?_sprintf(BANK0[2]), 
 
     write_string@a	PTR unsigned char  size(2) Largest target is 20
-		 -> BUFFER(BANK1[20]), STR_1(CODE[13]), 
+		 -> BUFFER(BANK1[20]), STR_1(CODE[14]), 
 
     Write_USART_String@a	PTR unsigned char  size(2) Largest target is 20
 		 -> STR_3(CODE[13]), BUFFER(BANK1[20]), 
@@ -11043,7 +11043,7 @@ DATA                 0      0      8A      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Mon Feb 15 16:30:39 2021
+Symbol Table                                                                                   Mon Feb 15 16:53:05 2021
 
                           pc 0002               ___bmul@product 0026                  _SSPSTATbits 0094  
                          l71 110F                           l65 082F                           l74 10DD  
@@ -11243,8 +11243,8 @@ Symbol Table                                                                    
                        l2992 02DA                         l2976 024E                         l2968 01BD  
                        l2896 0E18                         l2888 0DE1                         l2994 02EC  
                        l2986 0297                         l2996 02F5                         l2988 02A5  
-                       l2998 0302                         STR_1 1086                         STR_2 1093  
-                       STR_3 1086                         _CMDs 1EF3                         u3000 168A  
+                       l2998 0302                         STR_1 1086                         STR_2 1094  
+                       STR_3 1087                         _CMDs 1EF3                         u3000 168A  
                        u3001 1689                         u3010 1692                         u3011 1691  
                        u3100 122D                         u3021 169B                         u3101 122C  
                        u2310 146C                         u3022 16A2                         u2311 146B  

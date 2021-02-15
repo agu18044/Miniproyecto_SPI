@@ -63,10 +63,10 @@ void main(void) {
         
         clear_LCD();
         set_cursor(1,1);
-        write_string("S1   S2   S3");
+        write_string(" S1   S2   S3");
         
         V1 = ADC*0.0196; 
-        sprintf(BUFFER,"%2.1f   %d", V1,cont);
+        sprintf(BUFFER,"%2.1f  %d",V1,cont);
         
         set_cursor(2,1);
         write_string(BUFFER);

@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
-"80 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\ADC.X\adcSl.c
+"78 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\ADC.X\adcSl.c
 [e E1292 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -47,11 +47,11 @@ SPI_ACTIVE_2_IDLE 64
 ]
 "7 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\ADC.X\ADC.c
 [v _ADCmed ADCmed `(uc  1 e 1 0 ]
-"47 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\ADC.X\adcSl.c
+"46 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\ADC.X\adcSl.c
 [v _isr isr `II(v  1 e 1 0 ]
-"57
+"56
 [v _main main `(v  1 e 1 0 ]
-"67
+"66
 [v _setup setup `(v  1 e 1 0 ]
 "62 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
@@ -250,15 +250,15 @@ SPI_ACTIVE_2_IDLE 64
 [v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
 "4463
 [v _TRISC5 TRISC5 `VEb  1 e 0 @1085 ]
-"57 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\ADC.X\adcSl.c
+"56 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\ADC.X\adcSl.c
 [v _main main `(v  1 e 1 0 ]
 {
-"62
+"61
 } 0
-"67
+"66
 [v _setup setup `(v  1 e 1 0 ]
 {
-"81
+"79
 } 0
 "12 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\ADC.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
@@ -280,10 +280,10 @@ SPI_ACTIVE_2_IDLE 64
 [v ADCmed@ch ch `uc  1 a 1 5 ]
 "92
 } 0
-"47 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\ADC.X\adcSl.c
+"46 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\ADC.X\adcSl.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"52
+"51
 } 0
 "34 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\ADC.X\SPI.c
 [v _spiWrite spiWrite `(v  1 e 1 0 ]
