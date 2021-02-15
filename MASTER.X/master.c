@@ -9,6 +9,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "SPI.h"
+#include "USART.h"
 
 //******************************************************************************
 //  Palabra de cofiguración

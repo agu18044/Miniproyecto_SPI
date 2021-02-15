@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>SPI.h</itemPath>
       <itemPath>USART.h</itemPath>
+      <itemPath>LCD.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -17,6 +18,7 @@
       <itemPath>master.c</itemPath>
       <itemPath>SPI.c</itemPath>
       <itemPath>USART.c</itemPath>
+      <itemPath>LCD.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
