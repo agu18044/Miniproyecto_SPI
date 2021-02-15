@@ -1,5 +1,5 @@
 /*
- * File:   CONT.c
+ * File:   master.c
  * Author: Diego Aguilar
  *
  * Created on 14 de febrero de 2021, 11:44 PM
@@ -32,8 +32,6 @@
 //  Variables
 //******************************************************************************
 #define _XTAL_FREQ 8000000
-uint8_t contador = 0;
-
 
 //******************************************************************************
 //  Prototipos de funciones
@@ -45,7 +43,7 @@ void setup(void);
 //*****************************************************************************
 void __interrupt() isr(void){
    if(SSPIF == 1){
-        spiWrite(contador);
+        spiWrite();
         SSPIF = 0;
     }
 }
@@ -53,23 +51,10 @@ void __interrupt() isr(void){
 //******************************************************************************
 //  Ciclo principal
 //******************************************************************************
-void main(void) {         
+void main(void) {
     setup();
     while(1){
-        if (PORTBbits.RB0 == 0){
-           __delay_ms(100);
-           if(PORTBbits.RB0==1){
-            contador ++;
-            PORTD = contador;
-           }
-        }
-        if(PORTBbits.RB1 == 0){
-           __delay_ms(100);
-           if(PORTBbits.RB1==1){
-            contador --;
-            PORTD = contador;
-           }
-        }
+        
     }
 }
 
@@ -79,17 +64,11 @@ void main(void) {
 void setup(void) {
     ANSEL = 0;
     ANSELH = 0;
-    
-    TRISB = 3;
-    TRISD = 0;
-    PORTB = 0;
-    PORTD = 0;
-    
+  
     INTCONbits.GIE = 1;         // Habilitamos interrupciones
     INTCONbits.PEIE = 1;        // Habilitamos interrupciones PEIE
     PIR1bits.SSPIF = 0;         // Borramos bandera interrupción MSSP
     PIE1bits.SSPIE = 1;         // Habilitamos interrupción MSSP
     TRISAbits.TRISA5 = 1;       // Slave Select
-    
     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
-    }
+}
