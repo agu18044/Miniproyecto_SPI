@@ -360,7 +360,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;temp.c: 29:         ADC = ADCmed(8);
 [p x BOR4V  =  BOR40V    ]
 "30
-[; ;temp.c: 30:         TEMP = ADC * 0.0059;
+[; ;temp.c: 30:         TEMP = ADC * 1.9547;
 [p x WRT  =  OFF         ]
 "36
 [; ;temp.c: 36:     if (TEMP < 25){
@@ -415,7 +415,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _ADC ( _ADCmed (1 -> -> 8 `i `uc ]
 "62
 [; ;temp.c: 62:     TRISAbits.TRISA5 = 1;
-[e = _TEMP -> * -> -> _ADC `i `d .0.0059 `f ]
+[e = _TEMP -> * -> -> _ADC `i `d .1.9547 `f ]
 "63
 [; ;temp.c: 63:     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 [e ( _semaforo ..  ]

@@ -2823,7 +2823,8 @@ void write_string(char *a);
 
 uint8_t cont = 0;
 uint8_t ADC = 0;
-float V1;
+uint8_t ADC2 = 0;
+float V1,TEMP;
 char BUFFER[20];
 
 
@@ -2832,6 +2833,7 @@ char BUFFER[20];
 void setup(void);
 void contador (void);
 void ADCread (void);
+void temperatura (void);
 
 
 
@@ -2846,13 +2848,15 @@ void main(void) {
     while(1){
         contador();
         ADCread();
+        temperatura();
 
         clear_LCD();
         set_cursor(1,1);
         write_string(" S1   S2   S3");
 
         V1 = ADC*0.0196;
-        sprintf(BUFFER,"%2.1f  %d",V1,cont);
+        TEMP = ADC2*1.9547;
+        sprintf(BUFFER,"%2.1f  %d   %2.1f",V1,cont,TEMP);
 
         set_cursor(2,1);
         write_string(BUFFER);
@@ -2893,6 +2897,18 @@ void ADCread (void){
     _delay((unsigned long)((1)*(8000000/4000.0)));
 }
 
+void temperatura (void){
+    PORTCbits.RC0 = 0;
+    _delay((unsigned long)((1)*(8000000/4000.0)));
+
+    spiWrite(1);
+    ADC2 = spiRead();
+
+    _delay((unsigned long)((1)*(8000000/4000.0)));
+    PORTCbits.RC0 = 1;
+    _delay((unsigned long)((1)*(8000000/4000.0)));
+}
+
 
 
 
@@ -2906,7 +2922,9 @@ void setup(void) {
 
     TRISC1 = 0;
     TRISC2 = 0;
+    TRISC0 = 0;
     PORTCbits.RC2 = 1;
     PORTCbits.RC1 = 1;
+    PORTCbits.RC0 = 1;
     spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 }

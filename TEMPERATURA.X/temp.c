@@ -59,7 +59,7 @@ void main(void) {
     setup();
     while(1){
         ADC = ADCmed(8);
-        TEMP = ADC * 0.0059;
+        TEMP = ADC * 1.9547;
         semaforo();
     }
 }

@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
-"125 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
+"143 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
 [e E1349 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -109,13 +109,15 @@ SPI_ACTIVE_2_IDLE 64
 [v _write_char write_char `(v  1 e 1 0 ]
 "99
 [v _write_string write_string `(v  1 e 1 0 ]
-"53 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
+"55 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
 [v _main main `(v  1 e 1 0 ]
-"86
+"90
 [v _contador contador `(v  1 e 1 0 ]
-"98
+"102
 [v _ADCread ADCread `(v  1 e 1 0 ]
-"113
+"114
+[v _temperatura temperatura `(v  1 e 1 0 ]
+"129
 [v _setup setup `(v  1 e 1 0 ]
 "12 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
@@ -135,7 +137,7 @@ SPI_ACTIVE_2_IDLE 64
 [v _Write_USART Write_USART `(v  1 e 1 0 ]
 "30
 [v _Write_USART_String Write_USART_String `(v  1 e 1 0 ]
-[s S87 . 1 `uc 1 RC0 1 0 :1:0 
+[s S91 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -145,8 +147,8 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 RC7 1 0 :1:7 
 ]
 "307 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
-[u S96 . 1 `S87 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES96  1 e 1 @7 ]
+[u S100 . 1 `S91 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES100  1 e 1 @7 ]
 "352
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
 "414
@@ -155,7 +157,7 @@ SPI_ACTIVE_2_IDLE 64
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
-[s S339 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S347 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -165,18 +167,18 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 SPEN 1 0 :1:7 
 ]
 "1068
-[s S348 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S356 . 1 `uc 1 RCD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S352 . 1 `uc 1 . 1 0 :6:0 
+[s S360 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 nRC8 1 0 :1:6 
 ]
-[s S355 . 1 `uc 1 . 1 0 :6:0 
+[s S363 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[u S358 . 1 `S339 1 . 1 0 `S348 1 . 1 0 `S352 1 . 1 0 `S355 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES358  1 e 1 @24 ]
+[u S366 . 1 `S347 1 . 1 0 `S356 1 . 1 0 `S360 1 . 1 0 `S363 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES366  1 e 1 @24 ]
 "1133
 [v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "1140
@@ -187,7 +189,7 @@ SPI_ACTIVE_2_IDLE 64
 [v _TRISE TRISE `VEuc  1 e 1 @137 ]
 "2177
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
-[s S192 . 1 `uc 1 BF 1 0 :1:0 
+[s S200 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -197,40 +199,40 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 SMP 1 0 :1:7 
 ]
 "2231
-[s S201 . 1 `uc 1 . 1 0 :2:0 
+[s S209 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D 1 0 :1:5 
 ]
-[s S206 . 1 `uc 1 . 1 0 :2:0 
+[s S214 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DATA 1 0 :1:5 
 ]
-[s S212 . 1 `uc 1 . 1 0 :2:0 
+[s S220 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S217 . 1 `uc 1 . 1 0 :2:0 
+[s S225 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S222 . 1 `uc 1 . 1 0 :2:0 
+[s S230 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S227 . 1 `uc 1 . 1 0 :2:0 
+[s S235 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[u S232 . 1 `S192 1 . 1 0 `S201 1 . 1 0 `S206 1 . 1 0 `S212 1 . 1 0 `S217 1 . 1 0 `S222 1 . 1 0 `S227 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES232  1 e 1 @148 ]
-[s S302 . 1 `uc 1 TX9D 1 0 :1:0 
+[u S240 . 1 `S200 1 . 1 0 `S209 1 . 1 0 `S214 1 . 1 0 `S220 1 . 1 0 `S225 1 . 1 0 `S230 1 . 1 0 `S235 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES240  1 e 1 @148 ]
+[s S310 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -240,15 +242,15 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 CSRC 1 0 :1:7 
 ]
 "2582
-[s S311 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S319 . 1 `uc 1 TXD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 nTX8 1 0 :1:6 
 ]
-[s S315 . 1 `uc 1 . 1 0 :6:0 
+[s S323 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[u S318 . 1 `S302 1 . 1 0 `S311 1 . 1 0 `S315 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES318  1 e 1 @152 ]
+[u S326 . 1 `S310 1 . 1 0 `S319 1 . 1 0 `S323 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES326  1 e 1 @152 ]
 "2642
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "3387
@@ -277,6 +279,8 @@ SPI_ACTIVE_2_IDLE 64
 [v _RE0 RE0 `VEb  1 e 0 @72 ]
 "4208
 [v _RE1 RE1 `VEb  1 e 0 @73 ]
+"4448
+[v _TRISC0 TRISC0 `VEb  1 e 0 @1080 ]
 "4451
 [v _TRISC1 TRISC1 `VEb  1 e 0 @1081 ]
 "4454
@@ -298,13 +302,16 @@ SPI_ACTIVE_2_IDLE 64
 "39
 [v _ADC ADC `uc  1 e 1 0 ]
 "40
-[v _V1 V1 `f  1 e 3 0 ]
+[v _ADC2 ADC2 `uc  1 e 1 0 ]
 "41
+[v _V1 V1 `f  1 e 3 0 ]
+[v _TEMP TEMP `f  1 e 3 0 ]
+"42
 [v _BUFFER BUFFER `[20]uc  1 e 20 0 ]
-"53
+"55
 [v _main main `(v  1 e 1 0 ]
 {
-"84
+"88
 } 0
 "99 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\LCD.c
 [v _write_string write_string `(v  1 e 1 0 ]
@@ -323,15 +330,20 @@ SPI_ACTIVE_2_IDLE 64
 [v write_char@a a `uc  1 a 1 2 ]
 "97
 } 0
+"114 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
+[v _temperatura temperatura `(v  1 e 1 0 ]
+{
+"124
+} 0
 "505 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
 "545
 [v sprintf@val val `ul  1 a 4 12 ]
-[u S605 . 4 `ul 1 vd 4 0 `d 1 integ 3 0 ]
+[u S613 . 4 `ul 1 vd 4 0 `d 1 integ 3 0 ]
 "543
-[v sprintf@tmpval tmpval `S605  1 a 4 8 ]
+[v sprintf@tmpval tmpval `S613  1 a 4 8 ]
 "533
 [v sprintf@fval fval `d  1 a 3 18 ]
 "517
@@ -564,10 +576,10 @@ SPI_ACTIVE_2_IDLE 64
 [v ___ftge@ff2 ff2 `f  1 p 3 3 ]
 "13
 } 0
-"113 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
+"129 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"126
+"144
 } 0
 "12 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
@@ -594,10 +606,10 @@ SPI_ACTIVE_2_IDLE 64
 [v set_cursor@a a `uc  1 a 1 6 ]
 "67
 } 0
-"86 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
+"90 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
 [v _contador contador `(v  1 e 1 0 ]
 {
-"96
+"100
 } 0
 "9 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\USART.c
 [v _config_txsta config_txsta `(v  1 e 1 0 ]
@@ -674,10 +686,10 @@ SPI_ACTIVE_2_IDLE 64
 [v port@a a `uc  1 a 1 0 ]
 "40
 } 0
-"98 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
+"102 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\master.c
 [v _ADCread ADCread `(v  1 e 1 0 ]
 {
-"108
+"112
 } 0
 "34 C:\Users\Usuario Dell\Documents\.DIGITAL II\Miniproyecto_SPI_GIT\Miniproyecto_SPI\MASTER.X\SPI.c
 [v _spiWrite spiWrite `(v  1 e 1 0 ]
