@@ -8,6 +8,7 @@
 #include <xc.h>
 #include <stdint.h>
 #include "SPI.h"
+#include "ADC.h"
 
 //******************************************************************************
 //  Palabra de cofiguración
@@ -32,18 +33,21 @@
 //  Variables
 //******************************************************************************
 #define _XTAL_FREQ 8000000
+uint8_t ADC = 0;
+float TEMP;
 
 //******************************************************************************
 //  Prototipos de funciones
 //******************************************************************************
 void setup(void);
+void semaforo (void);
 
 //*****************************************************************************
 // Código de Interrupción 
 //*****************************************************************************
 void __interrupt() isr(void){
    if(SSPIF == 1){
-        spiWrite();
+        spiWrite(ADC);
         SSPIF = 0;
     }
 }
@@ -54,17 +58,35 @@ void __interrupt() isr(void){
 void main(void) {
     setup();
     while(1){
-        
+        ADC = ADCmed(8);
+        TEMP = ADC * 0.0059;
+        semaforo();
     }
 }
 
+void semaforo (void){
+    if (TEMP < 25){
+        PORTD = 1;
+    }
+    else if (TEMP > 25 && TEMP < 36){
+        PORTD = 2;
+    }
+    else if (TEMP > 36){
+        PORTD = 4;
+    }
+    
+}
 //******************************************************************************
 //  Cofiguración
 //******************************************************************************
 void setup(void) {
     ANSEL = 0;
     ANSELH = 0;
+    TRISB = 0;
+    TRISD = 0;
   
+    PORTD = 0;
+    
     INTCONbits.GIE = 1;         // Habilitamos interrupciones
     INTCONbits.PEIE = 1;        // Habilitamos interrupciones PEIE
     PIR1bits.SSPIF = 0;         // Borramos bandera interrupción MSSP

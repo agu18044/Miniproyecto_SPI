@@ -120,7 +120,9 @@ void setup(void) {
 
     TRISC1 = 0;
     TRISC2 = 0;
+    TRISC0 = 0;
     PORTCbits.RC2 = 1;
     PORTCbits.RC1 = 1;
+    PORTCBITS.RC0 = 1;
     spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 }
