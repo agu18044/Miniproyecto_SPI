@@ -45,8 +45,8 @@ void setup(void);
 //*****************************************************************************
 void __interrupt() isr(void){
    if(SSPIF == 1){
-        spiWrite(contador);
-        SSPIF = 0;
+        spiWrite(contador);  //se manda el valor del contador al bus de datos
+        SSPIF = 0;           //se apaga la bandera
     }
 }
 
@@ -56,13 +56,16 @@ void __interrupt() isr(void){
 void main(void) {         
     setup();
     while(1){
-        if (PORTBbits.RB0 == 0){
+        
+        // si se presiona el boton 1 el puerto D incermenta
+        if (PORTBbits.RB0 == 0){  
            __delay_ms(100);
            if(PORTBbits.RB0==1){
             contador ++;
             PORTD = contador;
            }
         }
+        // si se presiona el boton 2 el puerto D decrementa
         if(PORTBbits.RB1 == 0){
            __delay_ms(100);
            if(PORTBbits.RB1==1){
@@ -80,8 +83,8 @@ void setup(void) {
     ANSEL = 0;
     ANSELH = 0;
     
-    TRISB = 3;
-    TRISD = 0;
+    TRISB = 3;      //boton 1 y boton 2 para entradas
+    TRISD = 0;      //el contador
     PORTB = 0;
     PORTD = 0;
     

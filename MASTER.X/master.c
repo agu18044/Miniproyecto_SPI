@@ -35,9 +35,9 @@
 //  Variables
 //******************************************************************************
 #define _XTAL_FREQ 8000000
-uint8_t cont = 0;
-uint8_t ADC = 0;
-uint8_t ADC2 = 0;
+uint8_t cont = 0;       //varibale para lectura del esclavo contador
+uint8_t ADC = 0;        //varibale para lectura del esclavo ADC
+uint8_t ADC2 = 0;       //varibale para lectura del esclavo Temperatura
 float V1,TEMP;
 char BUFFER[20];
 
@@ -54,13 +54,14 @@ void temperatura (void);
 //******************************************************************************
 void main(void) {
     setup();
-    _baudios();
+    _baudios();         //configuración para comunicación USART
     config_txsta();
     config_rcsta();
-    LCD_init();
+    LCD_init();         //configuración para la pantalla LCD
     clear_LCD();
     while(1){
-        contador();
+        //llama a las diferentes funciones
+        contador();     
         ADCread();
         temperatura();
         
@@ -68,18 +69,18 @@ void main(void) {
         set_cursor(1,1);
         write_string(" S1   S2   S3");
         
-        V1 = ADC*0.0196; 
-        TEMP = ADC2*1.9547;
+        V1 = ADC*0.0196;        //convierte los valores a voltajes
+        TEMP = ADC2*1.9547;     //convierte los valores a temperaturas
         sprintf(BUFFER,"%2.1f  %d   %2.1f",V1,cont,TEMP);
         
         set_cursor(2,1);
-        write_string(BUFFER);
+        write_string(BUFFER);       //se escribe a la LCD los valores
         
         Write_USART_String("S1   S2   S3");
         Write_USART(13);
         Write_USART(10);
         
-        Write_USART_String(BUFFER);
+        Write_USART_String(BUFFER);  //se escribe a USART los valores
         Write_USART(13);
         Write_USART(10);
         
@@ -87,39 +88,39 @@ void main(void) {
     }
 }
 
-void contador (void){
-    PORTCbits.RC2 = 0;
+void contador (void){   // Función para recoger los datos del esclavo contador
+    PORTCbits.RC2 = 0;  //slave select activado para slave contador  
     __delay_ms(1);
    
     spiWrite(1);
-    cont = spiRead();
+    cont = spiRead();   //Guarda el valor del contador a una variable
     
     __delay_ms(1);
-    PORTCbits.RC2 = 1;
+    PORTCbits.RC2 = 1;   //slave select desactivado para slave contador 
     __delay_ms(1);
 }
 
-void ADCread (void){
-    PORTCbits.RC1 = 0;
+void ADCread (void){    // Función para recoger los datos del esclavo ADC
+    PORTCbits.RC1 = 0;  //slave select activado para slave ADC
     __delay_ms(1);
        
     spiWrite(1);
-    ADC = spiRead();
+    ADC = spiRead();    //Guarda el valor del ADC a una variable
        
     __delay_ms(1);
-    PORTCbits.RC1 = 1; 
+    PORTCbits.RC1 = 1;  //slave select desactivado para slave ADC 
     __delay_ms(1);
 }
 
-void temperatura (void){
-    PORTCbits.RC0 = 0;
+void temperatura (void){    // Función para recoger los datos del esclavo temperatura
+    PORTCbits.RC0 = 0;      //slave select activado para slave temperatura          
     __delay_ms(1);
        
     spiWrite(1);
-    ADC2 = spiRead();
+    ADC2 = spiRead();       //Guarda el valor de la temperatura a una variable
        
     __delay_ms(1);
-    PORTCbits.RC0 = 1; 
+    PORTCbits.RC0 = 1;       //slave select desactivado para slave temperatura  
     __delay_ms(1);
 }
 
@@ -134,11 +135,11 @@ void setup(void) {
     PORTD = 0;
     PORTE = 0;
 
-    TRISC1 = 0;
-    TRISC2 = 0;
-    TRISC0 = 0;
-    PORTCbits.RC2 = 1;
-    PORTCbits.RC1 = 1;
-    PORTCbits.RC0 = 1;
+    TRISC1 = 0;         //Slave select de contador
+    TRISC2 = 0;         //Slave select de ADC
+    TRISC0 = 0;         //Slave select de temperatura
+    PORTCbits.RC2 = 1;  
+    PORTCbits.RC1 = 1;  
+    PORTCbits.RC0 = 1;  
     spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 }

@@ -46,8 +46,8 @@ void setup(void);
 //*****************************************************************************
 void __interrupt() isr(void){
    if(SSPIF == 1){
-        spiWrite(ADC);
-        SSPIF = 0;
+        spiWrite(ADC);      //se manda el valor del contador al bus de datos
+        SSPIF = 0;          //se apaga la bandera
     }
 }
 
@@ -57,7 +57,7 @@ void __interrupt() isr(void){
 void main(void) {
     setup();
     while(1){
-       ADC = ADCmed(8);
+       ADC = ADCmed(8);     //le el canal 8 del ADC
     }
 }
 

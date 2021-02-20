@@ -47,8 +47,8 @@ void semaforo (void);
 //*****************************************************************************
 void __interrupt() isr(void){
    if(SSPIF == 1){
-        spiWrite(ADC);
-        SSPIF = 0;
+        spiWrite(ADC);      //se manda el valor del contador al bus de datos
+        SSPIF = 0;          //se apaga la bandera
     }
 }
 
@@ -58,19 +58,22 @@ void __interrupt() isr(void){
 void main(void) {
     setup();
     while(1){
-        ADC = ADCmed(8);
-        TEMP = ADC * 1.9547;
-        semaforo();
+        ADC = ADCmed(8);        //lee el valor del canal 8 del ADC
+        TEMP = ADC * 1.9547;    //convierte el valor a temperatura
+        semaforo();             //llama a la función semaforo 
     }
 }
 
 void semaforo (void){
+    //si la temperatura es menor de 25 se enciende la LED verde
     if (TEMP < 25){
         PORTD = 1;
     }
+    //si la tempertatura esta entre 25 y 36 se enciende la LED amarilla
     else if (TEMP > 25 && TEMP < 36){
         PORTD = 2;
     }
+    //si la temperatura es mayor a 36 se enciende la LED roja
     else if (TEMP > 36){
         PORTD = 4;
     }
@@ -85,7 +88,7 @@ void setup(void) {
     TRISB = 0;
     TRISD = 0;
   
-    PORTD = 0;
+    PORTD = 0;  //el semaforo
     
     INTCONbits.GIE = 1;         // Habilitamos interrupciones
     INTCONbits.PEIE = 1;        // Habilitamos interrupciones PEIE
